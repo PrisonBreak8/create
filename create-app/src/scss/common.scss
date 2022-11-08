@@ -1,4 +1,11 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+.page {
+	// .page__main
+	&__main {
+	}
+}
+//========================================================================================================================================================
 .title {
 	// .title__label
 	&__label {
@@ -32,3 +39,56 @@
 	}
 }
 //========================================================================================================================================================
+.main-title {
+	font-weight: 900;
+	@include adaptiveValue("font-size", 64, 40, 1230, 479, 1);
+	line-height: math.div(83, 64);
+	letter-spacing: em(1, 64);
+	color: $titleColor;
+	p {
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+	}
+}
+//========================================================================================================================================================
+.decor {
+	//opacity: 0.3;
+	// .decor__1
+	&__1 {
+		position: absolute;
+		top: 20%;
+		left: 8%;
+	}
+	// .decor__2
+	&__2 {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		opacity: 0.3;
+	}
+	// .decor__3
+	&__3 {
+		position: absolute;
+		right: 52%;
+		bottom: 47%;
+	}
+	// .decor__4
+	&__4 {
+		position: absolute;
+		left: 38%;
+		bottom: 23%;
+	}
+	// .decor__5
+	&__5 {
+		position: absolute;
+		right: 0;
+		top: 10%;
+	}
+	// .decor__6
+	&__6 {
+		position: absolute;
+		right: 0;
+		bottom: 5%;
+	}
+}
