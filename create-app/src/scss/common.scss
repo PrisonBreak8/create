@@ -1,1 +1,34 @@
 // Заголовки, общие БЄМ блоки и проче...
+.title {
+	// .title__label
+	&__label {
+		font-weight: 700;
+		line-height: 1.5;
+		letter-spacing: em(1, 16);
+		text-transform: uppercase;
+		color: $titleColor;
+
+		display: flex;
+		align-items: center;
+		gap: rem(10);
+
+		&:not(:last-child) {
+			margin-bottom: em(8, 16);
+		}
+
+		&::before {
+			content: "";
+			width: rem(16);
+			height: rem(2);
+			background-color: rgba(30, 33, 44, 0.7);
+		}
+	}
+	// .title__value
+	&__value {
+		font-weight: 900;
+		font-size: 46px;
+		@include adaptiveValue("font-size", 46, 32);
+		line-height: 1.3;
+	}
+}
+//========================================================================================================================================================

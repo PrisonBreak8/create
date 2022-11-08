@@ -2,8 +2,73 @@
 // Снипет (HTML): btn
 
 .button {
-	display: inline-flex;
-	padding: 0px 0px;
+	display: inline-block;
+	font-weight: 700;
+	text-align: center;
+	border-radius: rem(4);
+	text-transform: capitalize;
+
+	// .button_large
+	&_large {
+		padding: 0px 42px;
+		line-height: math.div(52, 16);
+	}
+	// .button_red
+	&_red {
+		color: #fff;
+		background-image: $btnGradient;
+		animation: animateBg 1.3s ease infinite paused;
+		background-size: 200%;
+
+		@media (any-hover: hover) {
+			&:hover {
+				animation-play-state: running;
+				background-image: $btnGradientMove;
+			}
+		}
+	}
+	// button_gradient
+	&_gradient {
+		position: relative;
+		color: #fc4928ff;
+		animation: animateBg 1.3s ease infinite paused;
+		background-size: 200%;
+		border: 2px solid #fc4928ff;
+		transition: background 0.2s ease-in, color 0.2s ease-in;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: rgba(252, 73, 40, 0.9);
+				color: #fff;
+			}
+		}
+	}
+	// .button_regular
+	&_regular {
+		font-size: 14px;
+		line-height: math.div(44, 14);
+		padding: 0 rem(32);
+		letter-spacing: em(0.5, 16);
+	}
+	// .button_small
+	&_small {
+		font-size: 12px;
+		padding: 0 rem(24);
+		letter-spacing: em(0.5, 12);
+		line-height: math.div(36, 12);
+	}
+	@keyframes animateBg {
+		0% {
+			background-position: 0;
+		}
+
+		50% {
+			background-position: 100%;
+		}
+
+		100% {
+			background-position: 0;
+		}
+	}
 	@media (any-hover: hover) {
 		&:hover {
 		}
