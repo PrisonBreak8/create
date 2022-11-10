@@ -1,6 +1,6 @@
 //====================================================================================================
 .header {
-	position: fixed;
+	//position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -11,9 +11,7 @@
 	@include adaptiveValue("padding-bottom", 20, 10, 1230, 992, 1);
 
 	background-color: $nextBgColor;
-	// .header__container
-	&__container {
-	}
+
 	// .header__menu
 	&__menu {
 		display: flex;
@@ -44,7 +42,7 @@
 		z-index: 3;
 		transition: color 0.2s ease-in;
 		@media (max-width: $mobileSmall) {
-			font-size: 20px;
+			font-size: rem(20);
 		}
 		@media (any-hover: hover) {
 			&:hover {
@@ -100,6 +98,10 @@
 				@media (max-width: $mobile) {
 					height: rem(52);
 				}
+
+				@media (max-width: $mobileSmall) {
+					height: rem(44);
+				}
 			}
 			.menu-open & {
 				left: 0;
@@ -113,7 +115,7 @@
 	&__item {
 		@media (max-width: $tablet) {
 			&:first-child {
-				padding-top: 110px;
+				padding-top: rem(110);
 			}
 		}
 	}
@@ -146,9 +148,6 @@
 			font-size: rem(24);
 		}
 	}
-	// .menu__icon
-	&__icon {
-	}
 }
 
 // ._icon-user
@@ -180,8 +179,8 @@
 	@media (max-width: $tablet) {
 		display: block;
 		position: relative;
-		width: 30px;
-		height: 18px;
+		width: rem(30);
+		height: rem(18);
 		flex: 0 0 rem(30);
 		cursor: pointer;
 		z-index: 5;
