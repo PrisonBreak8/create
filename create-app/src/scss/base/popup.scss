@@ -206,25 +206,25 @@ body.popup-show::after {
 	display: flex;
 	justify-content: center;
 	column-gap: rem(12);
+	._icon-linked-In,
+	._icon-twitter1,
+	._icon-google,
+	._icon-facebook {
+		font-size: rem(20);
+		color: $titleColor;
+		transition: color 0.2s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $hoverColor;
+			}
+		}
+	}
 }
 .popup__social-item {
 }
 .popup__social-link {
 }
 
-._icon-linked-In,
-._icon-twitter1,
-._icon-google,
-._icon-facebook {
-	font-size: rem(20);
-	color: $titleColor;
-	transition: color 0.2s ease;
-	@media (any-hover: hover) {
-		&:hover {
-			color: $hoverColor;
-		}
-	}
-}
 ._icon-google {
 }
 ._icon-twitter1 {
