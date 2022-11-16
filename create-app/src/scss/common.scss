@@ -25,6 +25,13 @@
 	// .page__testimonials
 	&__testimonials {
 	}
+	// .page__our-blog
+	&__our-blog {
+	}
+
+	// .page__subscribe
+	&__subscribe {
+	}
 }
 //========================================================================================================================================================
 .title {
@@ -49,6 +56,10 @@
 			width: rem(16);
 			height: rem(2);
 			background-color: rgba(30, 33, 44, 0.7);
+		}
+		// title__label_center
+		&_center {
+			justify-content: center;
 		}
 	}
 	// .title__value
