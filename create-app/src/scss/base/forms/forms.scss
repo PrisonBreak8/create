@@ -13,10 +13,8 @@
 	}
 	&__error {
 	}
-	&__error {
-	}
 }
-
+//========================================================================================================================================================
 .form {
 	display: flex;
 	align-items: center;
@@ -74,10 +72,65 @@
 		top: 100%;
 		left: 0;
 		color: red;
-		font-size: rem(14);
-		transform: translate(10%, 5px);
+		font-size: rem(12);
+		transform: translate(5%, 5px);
 	}
 }
+//========================================================================================================================================================
+.footer {
+	// .footer__form
+	&__form {
+		position: relative;
+		&:not(:last-child) {
+			margin-bottom: rem(12);
+		}
+	}
+	// .footer__input
+	&__input {
+		position: relative;
+		width: 100%;
+		height: rem(46);
+		padding: rem(0) rem(40) rem(0) rem(12);
+		background: rgba(255, 255, 255, 0.12);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		border-radius: rem(4);
+		font-size: rem(14);
+		line-height: math.div(18, 12);
+		outline-color: #fff;
+		color: #fff;
+
+		&::placeholder {
+			color: #fff;
+			opacity: 0.6;
+		}
+
+		&._form-error {
+			color: red;
+
+			outline-color: red;
+			&::placeholder {
+				color: red;
+			}
+		}
+	}
+}
+.button {
+	// .button__submit
+	&__submit {
+		position: absolute;
+		right: 10px;
+		top: 35%;
+		// ._icon-arrow-right
+		&:before {
+			@extend %ic;
+			content: "\e95a";
+			font-size: rem(12);
+			color: #fff;
+			opacity: 0.6;
+		}
+	}
+}
+
 //</FORM>
 
 // <BUTTONS>

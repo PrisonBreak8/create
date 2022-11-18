@@ -5,10 +5,15 @@
 .spollers {
 	display: grid;
 	gap: 15px;
+	display: none;
+	@media (max-width: em(680.98)) {
+		display: block;
+	}
 }
 // Спойлер
 .spollers__item {
 	font-size: rem(20);
+	color: #fff;
 	&:not(:last-child) {
 		margin-bottom: em(30, 20);
 	}
@@ -18,7 +23,7 @@
 	width: 100%;
 	cursor: default;
 	text-align: left;
-	border: 1px solid #eee;
+	border: 1px solid rgba(255, 255, 255, 0.2);
 	padding: rem(10) rem(15);
 	border-radius: rem(5);
 	position: relative;
@@ -30,9 +35,9 @@
 			position: absolute;
 			right: 10px;
 			top: 50%;
-			background-color: #000;
+			background-color: #fff;
 			height: 2px;
-			width: 15px;
+			width: 12px;
 			transition: transform 0.5s ease 0s;
 		}
 		&::before {

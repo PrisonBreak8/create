@@ -10,8 +10,6 @@
 	@include adaptiveValue("padding-top", 20, 10, 1230, 992, 1);
 	@include adaptiveValue("padding-bottom", 20, 10, 1230, 992, 1);
 
-	background-color: $nextBgColor;
-
 	// .header__menu
 	&__menu {
 		display: flex;

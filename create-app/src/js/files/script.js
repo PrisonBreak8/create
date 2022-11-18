@@ -6,11 +6,15 @@
 const menuLinks = document.querySelectorAll('.menu__link');
 console.log(menuLinks);
 
-function linkColor() {
-	menuLinks.forEach(link => link.classList.remove('js-active-link'));
-	this.classList.add('js-active-link');
-};
+if (menuLinks) {
+	function linkColor() {
+		menuLinks.forEach(link => link.classList.remove('js-active-link'));
+		this.classList.add('js-active-link');
+	};
+	menuLinks.forEach(link => link.addEventListener('click', linkColor));
+}
 
-menuLinks.forEach(link => link.addEventListener('click', linkColor));
+
+
 //========================================================================================================================================================
 
