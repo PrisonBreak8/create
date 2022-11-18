@@ -771,40 +771,40 @@
     );
   }
   S.fn = w.prototype;
-  const T = "resize scroll".split(" ");
-  function E(e) {
+  const E = "resize scroll".split(" ");
+  function T(e) {
     return function (...t) {
       if (void 0 === t[0]) {
         for (let t = 0; t < this.length; t += 1)
-          T.indexOf(e) < 0 &&
+          E.indexOf(e) < 0 &&
             (e in this[t] ? this[t][e]() : S(this[t]).trigger(e));
         return this;
       }
       return this.on(e, ...t);
     };
   }
-  E("click"),
-    E("blur"),
-    E("focus"),
-    E("focusin"),
-    E("focusout"),
-    E("keyup"),
-    E("keydown"),
-    E("keypress"),
-    E("submit"),
-    E("change"),
-    E("mousedown"),
-    E("mousemove"),
-    E("mouseup"),
-    E("mouseenter"),
-    E("mouseleave"),
-    E("mouseout"),
-    E("mouseover"),
-    E("touchstart"),
-    E("touchend"),
-    E("touchmove"),
-    E("resize"),
-    E("scroll");
+  T("click"),
+    T("blur"),
+    T("focus"),
+    T("focusin"),
+    T("focusout"),
+    T("keyup"),
+    T("keydown"),
+    T("keypress"),
+    T("submit"),
+    T("change"),
+    T("mousedown"),
+    T("mousemove"),
+    T("mouseup"),
+    T("mouseenter"),
+    T("mouseleave"),
+    T("mouseout"),
+    T("mouseover"),
+    T("touchstart"),
+    T("touchend"),
+    T("touchmove"),
+    T("resize"),
+    T("scroll");
   const x = {
     addClass: function (...e) {
       const t = y(e.map((e) => e.split(" ")));
@@ -1220,10 +1220,10 @@
   function k(e, t) {
     return void 0 === t && (t = 0), setTimeout(e, t);
   }
-  function $() {
+  function A() {
     return Date.now();
   }
-  function A(e, t) {
+  function $(e, t) {
     void 0 === t && (t = "x");
     const s = b();
     let i, n, r;
@@ -1271,7 +1271,7 @@
       n || 0
     );
   }
-  function P(e) {
+  function M(e) {
     return (
       "object" == typeof e &&
       null !== e &&
@@ -1279,7 +1279,7 @@
       "Object" === Object.prototype.toString.call(e).slice(8, -1)
     );
   }
-  function M(e) {
+  function P(e) {
     return "undefined" != typeof window && void 0 !== window.HTMLElement
       ? e instanceof HTMLElement
       : e && (1 === e.nodeType || 11 === e.nodeType);
@@ -1289,18 +1289,18 @@
       t = ["__proto__", "constructor", "prototype"];
     for (let s = 1; s < arguments.length; s += 1) {
       const i = s < 0 || arguments.length <= s ? void 0 : arguments[s];
-      if (null != i && !M(i)) {
+      if (null != i && !P(i)) {
         const s = Object.keys(Object(i)).filter((e) => t.indexOf(e) < 0);
         for (let t = 0, n = s.length; t < n; t += 1) {
           const n = s[t],
             r = Object.getOwnPropertyDescriptor(i, n);
           void 0 !== r &&
             r.enumerable &&
-            (P(e[n]) && P(i[n])
+            (M(e[n]) && M(i[n])
               ? i[n].__swiper__
                 ? (e[n] = i[n])
                 : O(e[n], i[n])
-              : !P(e[n]) && P(i[n])
+              : !M(e[n]) && M(i[n])
               ? ((e[n] = {}), i[n].__swiper__ ? (e[n] = i[n]) : O(e[n], i[n]))
               : (e[n] = i[n]));
         }
@@ -1342,7 +1342,7 @@
     p();
   }
   let z, D, B;
-  function G() {
+  function q() {
     return (
       z ||
         (z = (function () {
@@ -1373,13 +1373,13 @@
       z
     );
   }
-  function q(e) {
+  function G(e) {
     return (
       void 0 === e && (e = {}),
       D ||
         (D = (function (e) {
           let { userAgent: t } = void 0 === e ? {} : e;
-          const s = G(),
+          const s = q(),
             i = b(),
             n = i.navigator.platform,
             r = t || i.navigator.userAgent,
@@ -1611,9 +1611,9 @@
           i.cssMode &&
           (_(e.wrapperEl, "--swiper-centered-offset-before", ""),
           _(e.wrapperEl, "--swiper-centered-offset-after", ""));
-      const T = i.grid && i.grid.rows > 1 && e.grid;
-      let E;
-      T && e.grid.initSlides(p);
+      const E = i.grid && i.grid.rows > 1 && e.grid;
+      let T;
+      E && e.grid.initSlides(p);
       const x =
         "auto" === i.slidesPerView &&
         i.breakpoints &&
@@ -1621,10 +1621,10 @@
           (e) => void 0 !== i.breakpoints[e].slidesPerView
         ).length > 0;
       for (let n = 0; n < p; n += 1) {
-        E = 0;
+        T = 0;
         const a = c.eq(n);
         if (
-          (T && e.grid.updateSlide(n, a, p, t), "none" !== a.css("display"))
+          (E && e.grid.updateSlide(n, a, p, t), "none" !== a.css("display"))
         ) {
           if ("auto" === i.slidesPerView) {
             x && (c[n].style[t("width")] = "");
@@ -1636,7 +1636,7 @@
               l && (a[0].style.webkitTransform = "none"),
               i.roundLengths)
             )
-              E = e.isHorizontal() ? a.outerWidth(!0) : a.outerHeight(!0);
+              T = e.isHorizontal() ? a.outerWidth(!0) : a.outerHeight(!0);
             else {
               const e = s(r, "width"),
                 t = s(r, "padding-left"),
@@ -1644,23 +1644,23 @@
                 n = s(r, "margin-left"),
                 o = s(r, "margin-right"),
                 l = r.getPropertyValue("box-sizing");
-              if (l && "border-box" === l) E = e + n + o;
+              if (l && "border-box" === l) T = e + n + o;
               else {
                 const { clientWidth: s, offsetWidth: r } = a[0];
-                E = e + t + i + n + o + (r - s);
+                T = e + t + i + n + o + (r - s);
               }
             }
             o && (a[0].style.transform = o),
               l && (a[0].style.webkitTransform = l),
-              i.roundLengths && (E = Math.floor(E));
+              i.roundLengths && (T = Math.floor(T));
           } else
-            (E = (r - (i.slidesPerView - 1) * w) / i.slidesPerView),
-              i.roundLengths && (E = Math.floor(E)),
-              c[n] && (c[n].style[t("width")] = `${E}px`);
-          c[n] && (c[n].swiperSlideSize = E),
-            f.push(E),
+            (T = (r - (i.slidesPerView - 1) * w) / i.slidesPerView),
+              i.roundLengths && (T = Math.floor(T)),
+              c[n] && (c[n].style[t("width")] = `${T}px`);
+          c[n] && (c[n].swiperSlideSize = T),
+            f.push(T),
             i.centeredSlides
-              ? ((y = y + E / 2 + C / 2 + w),
+              ? ((y = y + T / 2 + C / 2 + w),
                 0 === C && 0 !== n && (y = y - r / 2 - w),
                 0 === n && (y = y - r / 2 - w),
                 Math.abs(y) < 0.001 && (y = 0),
@@ -1672,9 +1672,9 @@
                   e.params.slidesPerGroup ==
                   0 && u.push(y),
                 h.push(y),
-                (y = y + E + w)),
-            (e.virtualSize += E + w),
-            (C = E),
+                (y = y + T + w)),
+            (e.virtualSize += T + w),
+            (C = T),
             (S += 1);
         }
       }
@@ -1686,7 +1686,7 @@
           n.css({ width: `${e.virtualSize + i.spaceBetween}px` }),
         i.setWrapperSize &&
           n.css({ [t("width")]: `${e.virtualSize + i.spaceBetween}px` }),
-        T && e.grid.updateWrapperSize(E, u, t),
+        E && e.grid.updateWrapperSize(T, u, t),
         !i.centeredSlides)
       ) {
         const t = [];
@@ -2024,7 +2024,7 @@
       const { params: t, rtlTranslate: s, translate: i, $wrapperEl: n } = this;
       if (t.virtualTranslate) return s ? -i : i;
       if (t.cssMode) return i;
-      let r = A(n[0], e);
+      let r = $(n[0], e);
       return s && (r = -r), r || 0;
     },
     setTranslate: function (e, t) {
@@ -2592,7 +2592,7 @@
       }),
       (a.startX = u),
       (a.startY = h),
-      (n.touchStartTime = $()),
+      (n.touchStartTime = A()),
       (t.allowClick = !0),
       t.updateSize(),
       (t.swipeDirection = void 0),
@@ -2646,7 +2646,7 @@
         void (
           i.isTouched &&
           (Object.assign(r, { startX: c, startY: p, currentX: c, currentY: p }),
-          (i.touchStartTime = $()))
+          (i.touchStartTime = A()))
         )
       );
     if (i.isTouchEvent && n.touchReleaseOnEdges && !n.loop)
@@ -2800,7 +2800,7 @@
       s.isTouched &&
       (!0 === t.allowSlideNext || !0 === t.allowSlidePrev) &&
       t.setGrabCursor(!1);
-    const d = $(),
+    const d = A(),
       c = d - s.touchStartTime;
     if (t.allowClick) {
       const e = l.path || (l.composedPath && l.composedPath());
@@ -2811,7 +2811,7 @@
           t.emit("doubleTap doubleClick", l);
     }
     if (
-      ((s.lastClickTime = $()),
+      ((s.lastClickTime = A()),
       k(() => {
         t.destroyed || (t.allowClick = !0);
       }),
@@ -3375,8 +3375,8 @@
       }
       const r = this;
       (r.__swiper__ = !0),
-        (r.support = G()),
-        (r.device = q({ userAgent: t.userAgent })),
+        (r.support = q()),
+        (r.device = G({ userAgent: t.userAgent })),
         (r.browser = N()),
         (r.eventsListeners = {}),
         (r.eventsAnyListeners = []),
@@ -3452,7 +3452,7 @@
             startTranslate: void 0,
             allowThresholdMove: void 0,
             focusableElements: r.params.focusableElements,
-            lastClickTime: $(),
+            lastClickTime: A(),
             clickTimeout: void 0,
             velocities: [],
             allowMomentumBounce: void 0,
@@ -4419,13 +4419,14 @@
     }
   }, 0);
   const be = document.querySelectorAll(".menu__link");
-  function we() {
-    be.forEach((e) => e.classList.remove("js-active-link")),
-      this.classList.add("js-active-link");
+  if ((console.log(be), be)) {
+    function we() {
+      be.forEach((e) => e.classList.remove("js-active-link")),
+        this.classList.add("js-active-link");
+    }
+    be.forEach((e) => e.addEventListener("click", we));
   }
-  console.log(be),
-    be.forEach((e) => e.addEventListener("click", we)),
-    (window.PrisonBreak = !0),
+  (window.PrisonBreak = !0),
     (function (e) {
       let t = new Image();
       (t.onload = t.onerror =
@@ -4444,6 +4445,69 @@
         e.addEventListener("click", function (e) {
           n && (r(), document.documentElement.classList.toggle("menu-open"));
         });
+    })(),
+    (function () {
+      const e = document.querySelectorAll("[data-spollers]");
+      if (e.length > 0) {
+        const t = Array.from(e).filter(function (e, t, s) {
+          return !e.dataset.spollers.split(",")[0];
+        });
+        t.length && r(t);
+        let n = d(e, "spollers");
+        function r(e, t = !1) {
+          e.forEach((e) => {
+            (e = t ? e.item : e),
+              t.matches || !t
+                ? (e.classList.add("_spoller-init"),
+                  a(e),
+                  e.addEventListener("click", o))
+                : (e.classList.remove("_spoller-init"),
+                  a(e, !1),
+                  e.removeEventListener("click", o));
+          });
+        }
+        function a(e, t = !0) {
+          const s = e.querySelectorAll("[data-spoller]");
+          s.length > 0 &&
+            s.forEach((e) => {
+              t
+                ? (e.removeAttribute("tabindex"),
+                  e.classList.contains("_spoller-active") ||
+                    (e.nextElementSibling.hidden = !0))
+                : (e.setAttribute("tabindex", "-1"),
+                  (e.nextElementSibling.hidden = !1));
+            });
+        }
+        function o(e) {
+          const t = e.target;
+          if (t.closest("[data-spoller]")) {
+            const n = t.closest("[data-spoller]"),
+              r = n.closest("[data-spollers]"),
+              a = !!r.hasAttribute("data-one-spoller");
+            r.querySelectorAll("._slide").length ||
+              (a && !n.classList.contains("_spoller-active") && l(r),
+              n.classList.toggle("_spoller-active"),
+              ((e, t = 500) => {
+                e.hidden ? i(e, t) : s(e, t);
+              })(n.nextElementSibling, 500)),
+              e.preventDefault();
+          }
+        }
+        function l(e) {
+          const t = e.querySelector("[data-spoller]._spoller-active");
+          t &&
+            (t.classList.remove("_spoller-active"),
+            s(t.nextElementSibling, 500));
+        }
+        n &&
+          n.length &&
+          n.forEach((e) => {
+            e.matchMedia.addEventListener("change", function () {
+              r(e.itemsArray, e.matchMedia);
+            }),
+              r(e.itemsArray, e.matchMedia);
+          });
+      }
     })(),
     (function () {
       const e = document.querySelectorAll("[data-tabs]");
