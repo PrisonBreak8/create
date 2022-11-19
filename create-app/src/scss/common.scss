@@ -32,6 +32,9 @@
 	// .page__subscribe
 	&__subscribe {
 	}
+	// .page__studying
+	&__studying {
+	}
 }
 //========================================================================================================================================================
 .header-bg-red {
@@ -42,7 +45,40 @@
 	background-color: #fff;
 }
 //========================================================================================================================================================
-
+.js-hidden {
+	display: none;
+}
+.button-more {
+	@include adaptiveValue("margin-top", 80, 25);
+}
+.button-load {
+	display: flex;
+	align-items: center;
+	column-gap: rem(16);
+	margin: 0 auto;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: math.div(26, 16);
+	transition: color 0.3s ease;
+	@media (any-hover: hover) {
+		&:hover:before {
+			color: $hoverColor;
+			transform: rotate(180deg);
+		}
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			color: $hoverColor;
+		}
+	}
+	&:before {
+		@extend %ic;
+		content: "\e92a";
+		color: #000;
+		font-size: rem(24);
+		transition: color 0.2s ease, transform 0.3s ease-in;
+	}
+}
 //========================================================================================================================================================
 .title {
 	// .title__label

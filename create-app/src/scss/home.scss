@@ -303,17 +303,17 @@
 	}
 	// .cards__picture
 	&__picture {
-		width: rem(214);
 		min-height: rem(214);
 		@media (max-width: $tablet) {
 			width: 100%;
 		}
 
 		img {
-			width: 100%;
+			//width: 100%;
 			height: 100%;
+			width: rem(214);
 			max-width: rem(214);
-			object-fit: contain;
+			object-fit: cover;
 			@media (max-width: $tablet) {
 				min-width: 100%;
 			}
@@ -352,9 +352,15 @@
 		&_design {
 			background-color: #f52f6e;
 		}
+
+		// cards__job-title_development
+		&_development {
+			background-color: #7772f1;
+		}
 	}
 	// .cards__job-sub-title
 	&__job-sub-title {
+		flex: 1 1 auto;
 		font-weight: 700;
 		@include adaptiveValue("font-size", 20, 16);
 		line-height: math.div(30, 20);
