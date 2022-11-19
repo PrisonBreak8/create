@@ -4420,13 +4420,58 @@
   }, 0);
   const be = document.querySelectorAll(".menu__link");
   if ((console.log(be), be)) {
-    function we() {
+    function xe() {
       be.forEach((e) => e.classList.remove("js-active-link")),
         this.classList.add("js-active-link");
     }
-    be.forEach((e) => e.addEventListener("click", we));
+    be.forEach((e) => e.addEventListener("click", xe));
   }
-  (window.PrisonBreak = !0),
+  const we = document.querySelector(".list"),
+    ye = document.querySelectorAll(".blocks__item"),
+    Ce = document.querySelectorAll(".list__item");
+  if (we) {
+    function Le() {
+      we.addEventListener("click", (e) => {
+        const t = e.target.dataset.id,
+          s = e.target;
+        switch (
+          (s.classList.contains("list__item") &&
+            (Ce.forEach((e) => e.classList.remove("tab-active")),
+            s.classList.add("tab-active")),
+          console.log(t),
+          t)
+        ) {
+          case "all":
+            ke("blocks__item");
+            break;
+          case "marketing":
+          case "management":
+          case "recruting":
+          case "design":
+          case "development":
+            ke(t);
+        }
+      });
+    }
+    function ke(e) {
+      ye.forEach((t) => {
+        t.classList.contains(e)
+          ? (t.style.display = "block")
+          : (t.style.display = "none");
+      });
+    }
+    Le();
+  }
+  let Se = document.querySelector(".button-load");
+  const Ee = document.querySelectorAll(".js-hidden");
+  let Te = !0;
+  Se &&
+    Se.addEventListener("click", () => {
+      (Se.textContent = Te ? "Hidden" : "Load more"),
+        (Te = !Te),
+        Ee.forEach((e) => e.classList.toggle("js-hidden"));
+    }),
+    (window.PrisonBreak = !0),
     (function (e) {
       let t = new Image();
       (t.onload = t.onerror =
