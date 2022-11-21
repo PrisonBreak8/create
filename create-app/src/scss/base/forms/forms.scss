@@ -15,8 +15,11 @@
 	}
 }
 //========================================================================================================================================================
-.form {
+.form-flex {
 	display: flex;
+}
+
+.form {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -143,7 +146,7 @@
 
 // <CHECK>
 // Снипет (HTML): chk
-// @import "checkbox";
+@import "checkbox";
 
 // <RADIO>
 // Снипет (HTML): opt
@@ -151,7 +154,7 @@
 
 // <SELECT>
 // Снипет (HTML): sel
-// @import "select";
+@import "select";
 
 // <RATING>
 // Снипет (HTML): rating

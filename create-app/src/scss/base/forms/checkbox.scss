@@ -9,11 +9,12 @@
 		width: 0;
 		height: 0;
 		opacity: 0;
+
 		&:focus + .checkbox__label:before {
-			box-shadow: 0 0 5px #000;
+			box-shadow: 0 0 5px #ff3f3a;
 		}
 		&:checked + .checkbox__label:before {
-			background: #000;
+			background-color: #ff3f3a;
 		}
 	}
 	// .checkbox__label
@@ -25,8 +26,14 @@
 		gap: 10px;
 		&:before {
 			content: "";
-			align-self: flex-start;
+			@extend %ic;
+			content: "\e903";
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
 			flex: 0 0 20px;
+			font-size: 6px;
+			color: #fff;
 			width: 20px;
 			height: 20px;
 			border: 1px solid #a7a9ac;

@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Createx"
+})
+
+<body>
+	<div class="wrapper">
+
+		<header class="header header-bg-white">
+			<div class="header__container">
+
+				<div class="header__menu menu">
+
+					<nav class="menu__body">
+						<a href="home.html" class="header__logo"><img src="@img/logo.svg" alt="logo"></a>
+						<ul class="menu__list ">
+							<li class="menu__item "><a href="home.html" class="menu__link">About Us</a></li>
+							<li class="menu__item"><a href="courses.html" class="menu__link">Courses</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Events</a></li>
+							<li class="menu__item"><a href="#" class="menu__link js-active-link">Blog</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Contacts</a></li>
+						</ul>
+					</nav>
+
+					<div class="header__actions">
+						<button data-da=".menu__list, 767.98" type="button" class="button button_large button_red">Get consultation</button>
+						<a data-popup="#form-popup" data-da=".menu__list, 479.98" class="header__register" href=""><span class="_icon-user"></span>Log in / Register</a>
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+					</div>
+
+				</div>
+
+			</div>
+		</header>
+
+		<main class="page">
+
+			<section class="page__blog blog">
+				<div class="blog__container">
+
+					<div class="blog__title title">
+						<h2 class="title__label">Our blog</h2>
+						<h3 class="title__value">Createx School Journal</h3>
+					</div>
+
+					<div class="blog__box">
+						<ul class="list">
+							<li data-id="all" class="list__item tab-active">All</li>
+							<li data-id="articles" class="list__item list__item-flex _icon-files">Articles</li>
+							<li data-id="videos" class="list__item list__item-flex _icon-play">Videos</li>
+							<li data-id="podcasts" class="list__item list__item-flex _icon-mic">Podcasts</li>
+						</ul>
+
+						<div class="blog__block">
+							<div class="category">
+								<span class="category__blog">Blog category</span>
+
+								<select name="form[]" class="form">
+									<option value="1" selected>all themes</option>
+									<option value="2">Articles</option>
+									<option value="3">Videos</option>
+									<option value="4">Podcasts</option>
+								</select>
+
+							</div>
+
+							<div class="search-box">
+								<input type="text" class="search-text" placeholder="Search blog...">
+								<a href="#" class="search-btn _icon-search"></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="blocks-row">
+
+						<div class="blocks__column pages">
+
+							<div class="blocks__item  blocks__item_flex podcasts">
+								<div class="our-blog__item">
+									<a href="#" class="our-blog__post">
+										<img src="@img/home-page/our-blog/podcast.png" alt="podcast">
+										<span class="our-blog__mic _icon-mic">Podcast</span>
+									</a>
+
+									<ul class="our-blog__description">
+										<li class="our-blog__list our-blog__list_line">Marketing</li>
+										<li class="our-blog__list our-blog__list_line  _icon-calendar">September 4, 2020</li>
+										<li class="our-blog__list _icon-clock">36 min</li>
+									</ul>
+
+									<div class="our-blog__body">
+										<div class="our-blog__footer">
+											<div class="our-blog__text">
+												<p>
+													What is traffic arbitrage and does it really make money?
+												</p>
+											</div>
+											<div class="our-blog__sub-text">
+												<p>
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+												</p>
+											</div>
+											<a href="#" class="our-blog__listen _icon-arrow-right">Listen</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="blocks__item blocks__item_flex articles ">
+								<div class="our-blog__item">
+									<a href="#" class="our-blog__post">
+										<img src="@img/home-page/our-blog/article1.png" alt="article">
+										<span class="our-blog__mic _icon-files">Article</span>
+									</a>
+
+									<ul class="our-blog__description">
+										<li class="our-blog__list our-blog__list_line">Design</li>
+										<li class="our-blog__list our-blog__list_line  _icon-calendar">August 8, 2020</li>
+										<li class="our-blog__list _icon-clock">45 min</li>
+									</ul>
+
+									<div class="our-blog__body">
+										<div class="our-blog__footer">
+											<div class="our-blog__text">
+												<p>
+													What is traffic arbitrage and does it really make money?
+												</p>
+											</div>
+											<div class="our-blog__sub-text">
+												<p>
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+												</p>
+											</div>
+											<a href="#" class="our-blog__listen _icon-arrow-right">Listen</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="blocks__item blocks__item_flex videos">
+								<div class="our-blog__item">
+									<a href="#" class="our-blog__post">
+										<img src="@img/home-page/our-blog/article.png" alt="article">
+										<span class="our-blog__mic _icon-files">Video</span>
+									</a>
+
+									<ul class="our-blog__description">
+										<li class="our-blog__list our-blog__list_line">Design</li>
+										<li class="our-blog__list our-blog__list_line  _icon-calendar">August 8, 2020</li>
+										<li class="our-blog__list _icon-clock">45 min</li>
+									</ul>
+
+									<div class="our-blog__body">
+										<div class="our-blog__footer">
+											<div class="our-blog__text">
+												<p>
+													What is traffic arbitrage and does it really make money?
+												</p>
+											</div>
+											<div class="our-blog__sub-text">
+												<p>
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+												</p>
+											</div>
+											<a href="#" class="our-blog__listen _icon-arrow-right">Listen</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="blocks__item blocks__item_flex articles ">
+								<div class="our-blog__item">
+									<a href="#" class="our-blog__post">
+										<img src="@img/home-page/our-blog/article1.png" alt="article">
+										<span class="our-blog__mic _icon-files">Article</span>
+									</a>
+
+									<ul class="our-blog__description">
+										<li class="our-blog__list our-blog__list_line">Design</li>
+										<li class="our-blog__list our-blog__list_line  _icon-calendar">August 8, 2020</li>
+										<li class="our-blog__list _icon-clock">45 min</li>
+									</ul>
+
+									<div class="our-blog__body">
+										<div class="our-blog__footer">
+											<div class="our-blog__text">
+												<p>
+													What is traffic arbitrage and does it really make money?
+												</p>
+											</div>
+											<div class="our-blog__sub-text">
+												<p>
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+												</p>
+											</div>
+											<a href="#" class="our-blog__listen _icon-arrow-right">Listen</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="blocks__item blocks__item_flex videos">
+								<div class="our-blog__item">
+									<a href="#" class="our-blog__post">
+										<img src="@img/home-page/our-blog/article.png" alt="article">
+										<span class="our-blog__mic _icon-files">Video</span>
+									</a>
+
+									<ul class="our-blog__description">
+										<li class="our-blog__list our-blog__list_line">Design</li>
+										<li class="our-blog__list our-blog__list_line  _icon-calendar">August 8, 2020</li>
+										<li class="our-blog__list _icon-clock">45 min</li>
+									</ul>
+
+									<div class="our-blog__body">
+										<div class="our-blog__footer">
+											<div class="our-blog__text">
+												<p>
+													What is traffic arbitrage and does it really make money?
+												</p>
+											</div>
+											<div class="our-blog__sub-text">
+												<p>
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+												</p>
+											</div>
+											<a href="#" class="our-blog__listen _icon-arrow-right">Listen</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class=" blocks__item  blocks__item_flex podcasts">
+								<div class="our-blog__item">
+									<a href="#" class="our-blog__post">
+										<img src="@img/home-page/our-blog/podcast1.png" alt="podcast">
+										<span class="our-blog__mic _icon-mic">Podcast</span>
+									</a>
+
+									<ul class="our-blog__description">
+										<li class="our-blog__list our-blog__list_line">Marketing</li>
+										<li class="our-blog__list our-blog__list_line  _icon-calendar">September 4, 2020</li>
+										<li class="our-blog__list _icon-clock">36 min</li>
+									</ul>
+
+									<div class="our-blog__body">
+										<div class="our-blog__footer">
+											<div class="our-blog__text">
+												<p>
+													What is traffic arbitrage and does it really make money?
+												</p>
+											</div>
+											<div class="our-blog__sub-text">
+												<p>
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+												</p>
+											</div>
+											<a href="#" class="our-blog__listen _icon-arrow-right">Listen</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="blocks__item blocks__item_flex videos ">
+								<div class="our-blog__item">
+									<a href="#" class="our-blog__post">
+										<img src="@img/home-page/our-blog/video1.png" alt="article">
+										<span class="our-blog__mic _icon-files">Video</span>
+									</a>
+
+									<ul class="our-blog__description">
+										<li class="our-blog__list our-blog__list_line">Design</li>
+										<li class="our-blog__list our-blog__list_line  _icon-calendar">August 8, 2020</li>
+										<li class="our-blog__list _icon-clock">45 min</li>
+									</ul>
+
+									<div class="our-blog__body">
+										<div class="our-blog__footer">
+											<div class="our-blog__text">
+												<p>
+													What is traffic arbitrage and does it really make money?
+												</p>
+											</div>
+											<div class="our-blog__sub-text">
+												<p>
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+												</p>
+											</div>
+											<a href="#" class="our-blog__listen _icon-arrow-right">Listen</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class=" blocks__item blocks__item_flex articles ">
+								<div class="our-blog__item">
+									<a href="#" class="our-blog__post">
+										<img src="@img/home-page/our-blog/article3.png" alt="article">
+										<span class="our-blog__mic _icon-files">Article</span>
+									</a>
+
+									<ul class="our-blog__description">
+										<li class="our-blog__list our-blog__list_line">Design</li>
+										<li class="our-blog__list our-blog__list_line  _icon-calendar">August 8, 2020</li>
+										<li class="our-blog__list _icon-clock">45 min</li>
+									</ul>
+
+									<div class="our-blog__body">
+										<div class="our-blog__footer">
+											<div class="our-blog__text">
+												<p>
+													What is traffic arbitrage and does it really make money?
+												</p>
+											</div>
+											<div class="our-blog__sub-text">
+												<p>
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+												</p>
+											</div>
+											<a href="#" class="our-blog__listen _icon-arrow-right">Listen</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="blocks__item  blocks__item_flex podcasts">
+								<div class="our-blog__item">
+									<a href="#" class="our-blog__post">
+										<img src="@img/home-page/our-blog/podcast1.png" alt="podcast">
+										<span class="our-blog__mic _icon-mic">Podcast</span>
+									</a>
+
+									<ul class="our-blog__description">
+										<li class="our-blog__list our-blog__list_line">Marketing</li>
+										<li class="our-blog__list our-blog__list_line  _icon-calendar">September 4, 2020</li>
+										<li class="our-blog__list _icon-clock">36 min</li>
+									</ul>
+
+									<div class="our-blog__body">
+										<div class="our-blog__footer">
+											<div class="our-blog__text">
+												<p>
+													What is traffic arbitrage and does it really make money?
+												</p>
+											</div>
+											<div class="our-blog__sub-text">
+												<p>
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+												</p>
+											</div>
+											<a href="#" class="our-blog__listen _icon-arrow-right">Listen</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="blocks__item  blocks__item_flex podcasts">
+								<div class="our-blog__item">
+									<a href="#" class="our-blog__post">
+										<img src="@img/home-page/our-blog/podcast.png" alt="podcast">
+										<span class="our-blog__mic _icon-mic">Podcast</span>
+									</a>
+
+									<ul class="our-blog__description">
+										<li class="our-blog__list our-blog__list_line">Marketing</li>
+										<li class="our-blog__list our-blog__list_line  _icon-calendar">September 4, 2020</li>
+										<li class="our-blog__list _icon-clock">36 min</li>
+									</ul>
+
+									<div class="our-blog__body">
+										<div class="our-blog__footer">
+											<div class="our-blog__text">
+												<p>
+													What is traffic arbitrage and does it really make money?
+												</p>
+											</div>
+											<div class="our-blog__sub-text">
+												<p>
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+												</p>
+											</div>
+											<a href="#" class="our-blog__listen _icon-arrow-right">Listen</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="blocks__item blocks__item_flex videos">
+								<div class="our-blog__item">
+									<a href="#" class="our-blog__post">
+										<img src="@img/home-page/our-blog/article.png" alt="article">
+										<span class="our-blog__mic _icon-files">Video</span>
+									</a>
+
+									<ul class="our-blog__description">
+										<li class="our-blog__list our-blog__list_line">Design</li>
+										<li class="our-blog__list our-blog__list_line  _icon-calendar">August 8, 2020</li>
+										<li class="our-blog__list _icon-clock">45 min</li>
+									</ul>
+
+									<div class="our-blog__body">
+										<div class="our-blog__footer">
+											<div class="our-blog__text">
+												<p>
+													What is traffic arbitrage and does it really make money?
+												</p>
+											</div>
+											<div class="our-blog__sub-text">
+												<p>
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+												</p>
+											</div>
+											<a href="#" class="our-blog__listen _icon-arrow-right">Listen</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="blocks__item blocks__item_flex articles ">
+								<div class="our-blog__item">
+									<a href="#" class="our-blog__post">
+										<img src="@img/home-page/our-blog/article1.png" alt="article">
+										<span class="our-blog__mic _icon-files">Article</span>
+									</a>
+
+									<ul class="our-blog__description">
+										<li class="our-blog__list our-blog__list_line">Design</li>
+										<li class="our-blog__list our-blog__list_line  _icon-calendar">August 8, 2020</li>
+										<li class="our-blog__list _icon-clock">45 min</li>
+									</ul>
+
+									<div class="our-blog__body">
+										<div class="our-blog__footer">
+											<div class="our-blog__text">
+												<p>
+													What is traffic arbitrage and does it really make money?
+												</p>
+											</div>
+											<div class="our-blog__sub-text">
+												<p>
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+												</p>
+											</div>
+											<a href="#" class="our-blog__listen _icon-arrow-right">Listen</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="blocks__item blocks__item_flex articles ">
+								<div class="our-blog__item">
+									<a href="#" class="our-blog__post">
+										<img src="@img/home-page/our-blog/article1.png" alt="article">
+										<span class="our-blog__mic _icon-files">Article</span>
+									</a>
+
+									<ul class="our-blog__description">
+										<li class="our-blog__list our-blog__list_line">Design</li>
+										<li class="our-blog__list our-blog__list_line  _icon-calendar">August 8, 2020</li>
+										<li class="our-blog__list _icon-clock">45 min</li>
+									</ul>
+
+									<div class="our-blog__body">
+										<div class="our-blog__footer">
+											<div class="our-blog__text">
+												<p>
+													What is traffic arbitrage and does it really make money?
+												</p>
+											</div>
+											<div class="our-blog__sub-text">
+												<p>
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+												</p>
+											</div>
+											<a href="#" class="our-blog__listen _icon-arrow-right">Listen</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="blocks__item blocks__item_flex videos">
+								<div class="our-blog__item">
+									<a href="#" class="our-blog__post">
+										<img src="@img/home-page/our-blog/article.png" alt="article">
+										<span class="our-blog__mic _icon-files">Video</span>
+									</a>
+
+									<ul class="our-blog__description">
+										<li class="our-blog__list our-blog__list_line">Design</li>
+										<li class="our-blog__list our-blog__list_line  _icon-calendar">August 8, 2020</li>
+										<li class="our-blog__list _icon-clock">45 min</li>
+									</ul>
+
+									<div class="our-blog__body">
+										<div class="our-blog__footer">
+											<div class="our-blog__text">
+												<p>
+													What is traffic arbitrage and does it really make money?
+												</p>
+											</div>
+											<div class="our-blog__sub-text">
+												<p>
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+												</p>
+											</div>
+											<a href="#" class="our-blog__listen _icon-arrow-right">Listen</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="blocks__item  blocks__item_flex podcasts">
+								<div class="our-blog__item">
+									<a href="#" class="our-blog__post">
+										<img src="@img/home-page/our-blog/podcast1.png" alt="podcast">
+										<span class="our-blog__mic _icon-mic">Podcast</span>
+									</a>
+
+									<ul class="our-blog__description">
+										<li class="our-blog__list our-blog__list_line">Marketing</li>
+										<li class="our-blog__list our-blog__list_line  _icon-calendar">September 4, 2020</li>
+										<li class="our-blog__list _icon-clock">36 min</li>
+									</ul>
+
+									<div class="our-blog__body">
+										<div class="our-blog__footer">
+											<div class="our-blog__text">
+												<p>
+													What is traffic arbitrage and does it really make money?
+												</p>
+											</div>
+											<div class="our-blog__sub-text">
+												<p>
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+												</p>
+											</div>
+											<a href="#" class="our-blog__listen _icon-arrow-right">Listen</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="blocks__item blocks__item_flex videos ">
+								<div class="our-blog__item">
+									<a href="#" class="our-blog__post">
+										<img src="@img/home-page/our-blog/video1.png" alt="article">
+										<span class="our-blog__mic _icon-files">Video</span>
+									</a>
+
+									<ul class="our-blog__description">
+										<li class="our-blog__list our-blog__list_line">Design</li>
+										<li class="our-blog__list our-blog__list_line  _icon-calendar">August 8, 2020</li>
+										<li class="our-blog__list _icon-clock">45 min</li>
+									</ul>
+
+									<div class="our-blog__body">
+										<div class="our-blog__footer">
+											<div class="our-blog__text">
+												<p>
+													What is traffic arbitrage and does it really make money?
+												</p>
+											</div>
+											<div class="our-blog__sub-text">
+												<p>
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+												</p>
+											</div>
+											<a href="#" class="our-blog__listen _icon-arrow-right">Listen</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="blocks__item  blocks__item_flex podcasts">
+								<div class="our-blog__item">
+									<a href="#" class="our-blog__post">
+										<img src="@img/home-page/our-blog/podcast1.png" alt="podcast">
+										<span class="our-blog__mic _icon-mic">Podcast</span>
+									</a>
+
+									<ul class="our-blog__description">
+										<li class="our-blog__list our-blog__list_line">Marketing</li>
+										<li class="our-blog__list our-blog__list_line  _icon-calendar">September 4, 2020</li>
+										<li class="our-blog__list _icon-clock">36 min</li>
+									</ul>
+
+									<div class="our-blog__body">
+										<div class="our-blog__footer">
+											<div class="our-blog__text">
+												<p>
+													What is traffic arbitrage and does it really make money?
+												</p>
+											</div>
+											<div class="our-blog__sub-text">
+												<p>
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+												</p>
+											</div>
+											<a href="#" class="our-blog__listen _icon-arrow-right">Listen</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="blocks__item blocks__item_flex articles ">
+								<div class="our-blog__item">
+									<a href="#" class="our-blog__post">
+										<img src="@img/home-page/our-blog/article3.png" alt="article">
+										<span class="our-blog__mic _icon-files">Article</span>
+									</a>
+
+									<ul class="our-blog__description">
+										<li class="our-blog__list our-blog__list_line">Design</li>
+										<li class="our-blog__list our-blog__list_line  _icon-calendar">August 8, 2020</li>
+										<li class="our-blog__list _icon-clock">45 min</li>
+									</ul>
+
+									<div class="our-blog__body">
+										<div class="our-blog__footer">
+											<div class="our-blog__text">
+												<p>
+													What is traffic arbitrage and does it really make money?
+												</p>
+											</div>
+											<div class="our-blog__sub-text">
+												<p>
+													Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...
+												</p>
+											</div>
+											<a href="#" class="our-blog__listen _icon-arrow-right">Listen</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="pagination-cover">
+							<ul class="pagination"></ul>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<section class="page__want want">
+				<div class="want__container">
+
+					<div class="want__body">
+						<div class="want__picture">
+							<img src="@img/home-page/want-ilustration.svg" alt="Want to get the best articles weekly? Subscribe to our newsletter!">
+						</div>
+
+						<div class="want__content">
+
+							<h4 class="want__title">
+								Want to get the best articles weekly?
+								Subscribe to our newsletter!
+							</h4>
+							<form action="#" class="want__form form ">
+								<div class="form__block">
+									<input data-required="email" autocomplete="off" type="text" name="form[]" data-error="Erorr enter your email" placeholder="Your working email" class="form__input">
+								</div>
+								<div class="form__btn-block">
+									<button type="submit" class="form__button button button_large button_red">Subscribe</button>
+								</div>
+							</form>
+
+							<div class="want__checkbox checkbox">
+								<input id="c_1" class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<label for="c_1" class="checkbox__label">
+									<span class="checkbox__text">I agree to receive communications from Createx Online School</span>
+								</label>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+		</main>
+
+		@@include('html/_footer.htm',{})
+	</div>
+
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

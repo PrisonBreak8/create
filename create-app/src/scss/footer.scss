@@ -39,6 +39,7 @@
 	}
 	// .footer__logo
 	&__logo {
+		display: inline-block;
 		&:not(:last-child) {
 			margin-bottom: rem(20);
 		}

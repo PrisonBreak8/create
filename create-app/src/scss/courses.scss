@@ -44,9 +44,6 @@
 		row-gap: rem(10);
 	}
 
-	@media (max-width: $mobileSmall) {
-		flex-direction: column;
-	}
 	// .list__item
 	&__item {
 		font-weight: 700;
@@ -60,6 +57,7 @@
 		@media (max-width: $mobileSmall) {
 			width: 60%;
 			text-align: center;
+			justify-content: center;
 		}
 		span {
 			display: inline-block;
