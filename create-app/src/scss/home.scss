@@ -731,7 +731,7 @@
 	// .item-tutors__card
 	&__card {
 		position: relative;
-		z-index: 5;
+		//z-index: 5;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -747,10 +747,10 @@
 	}
 	// .item-tutors__image-ibg
 	&__image {
+		position: relative;
 		border-radius: rem(4);
 		img {
-			position: relative;
-			z-index: 10;
+			//z-index: 10;
 			transition: transform 0.8s ease;
 		}
 
@@ -794,16 +794,17 @@
 }
 .hiden {
 	position: absolute;
-	left: 0;
+	height: 160px;
 	bottom: 0;
+
 	width: 100%;
-	height: 100%;
+
 	opacity: 0;
 
 	display: flex;
+	justify-content: flex-end;
 	align-items: flex-end;
 	column-gap: rem(15);
-	justify-content: flex-end;
 
 	padding: 0 rem(20) rem(20) 0;
 
