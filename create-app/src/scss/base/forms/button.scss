@@ -57,6 +57,13 @@
 		letter-spacing: em(0.5, 12);
 		line-height: math.div(36, 12);
 	}
+	// .button_padding
+	&_padding {
+		padding: 0 rem(90);
+		letter-spacing: em(0.5, 16);
+		line-height: math.div(52, 16);
+		text-align: center;
+	}
 	@keyframes animateBg {
 		0% {
 			background-position: 0;

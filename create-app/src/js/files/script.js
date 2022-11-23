@@ -118,59 +118,7 @@ if (searchInput) {
 	});
 };
 
-//========================================================================================================================================================
-/*var count = 18; //всего записей
-var cnt = 9; //сколько отображаем сначала
-var cnt_page = Math.ceil(count / cnt); //кол-во страниц
 
-//выводим список страниц
-var paginator = document.querySelector(".paginator");
-var page = "";
-for (var i = 0; i < cnt_page; i++) {
-	page += "<span data-page=" + i * cnt + "  id=\"page" + (i + 1) + "\">" + (i + 1) + "</span>";
-}
-paginator.innerHTML = page;
-
-//выводим первые записи {cnt}
-var div_num = document.querySelectorAll(".num");
-for (var i = 0; i < div_num.length; i++) {
-	if (i < cnt) {
-		div_num[i].style.display = "flex";
-	}
-}
-
-var main_page = document.getElementById("page1");
-main_page.classList.add("paginator_active");
-
-//листаем
-paginator.addEventListener("click", pagination)
-
-function pagination(event) {
-	var e = event || window.event;
-	var target = e.target;
-	var id = target.id;
-
-	if (target.tagName.toLowerCase() != "span") return;
-
-	var num_ = id.substr(4);
-	var data_page = +target.dataset.page;
-	main_page.classList.remove("paginator_active");
-	main_page = document.getElementById(id);
-	main_page.classList.add("paginator_active");
-
-	var j = 0;
-	for (var i = 0; i < div_num.length; i++) {
-		var data_num = div_num[i].dataset.num;
-		if (data_num <= data_page || data_num >= data_page)
-			div_num[i].style.display = "none";
-
-	}
-	for (var i = data_page; i < div_num.length; i++) {
-		if (j >= cnt) break;
-		div_num[i].style.display = "flex";
-		j++;
-	}
-}*/
 
 //========================================================================================================================================================
 const lengthPart = 9; // количество элементов в 1 части
@@ -266,3 +214,64 @@ if (product) {
 		}
 	}
 }
+//========================================================================================================================================================
+
+function map(n) {
+	ymaps.ready(init);
+	function init() {
+		// Создание карты.
+		let myMap = new ymaps.Map("map", {
+			// Координаты центра карты.
+			// Порядок по умолчанию: «широта, долгота».
+			// Чтобы не определять координаты центра карты вручную,
+			// воспользуйтесь инструментом Определение координат.
+			//controls: [[53.88284739205031, 27.727503000000006]],
+			center: [34.78218143888964, 135.48873970312502],
+			// Уровень масштабирования. Допустимые значения:
+			// от 0 (весь мир) до 19.
+			zoom: 7
+		});
+
+		/* 
+		myMap.controls.remove('geolocationControl'); // удаляем геолокацию
+		myMap.controls.remove('searchControl'); // удаляем поиск
+		myMap.controls.remove('trafficControl'); // удаляем контроль трафика
+		myMap.controls.remove('typeSelector'); // удаляем тип
+		myMap.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+		myMap.controls.remove('zoomControl'); // удаляем контрол зуммирования
+		myMap.controls.remove('rulerControl'); // удаляем контрол правил
+		myMap.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+*/
+		let myPlacemark = new ymaps.Placemark([34.78218143888964, 135.48873970312502], {
+		}, {
+			// Опции.
+			//balloonContentHeader: 'Mistoun',
+			//balloonContentBody: 'Москва, Николоямская 40с1',
+			//balloonContentFooter: '+ 7(495) 507-54 - 90',
+			//hasBalloon: true,
+			//hideIconOnBalloonOpen: true,
+
+			hasBalloon: false,
+			hideIconOnBalloonOpen: false,
+			// Необходимо указать данный тип макета.
+			iconLayout: 'default#imageWithContent',
+			// Своё изображение иконки метки.
+			//iconImageHref: 'img/icons/map.svg',
+			// Размеры метки.
+			iconImageSize: [40, 40],
+			// Смещение левого верхнего угла иконки относительно
+			// её "ножки" (точки привязки).
+			iconImageOffset: [-20, -20],
+			// Смещение слоя с содержимым относительно слоя с картинкой.
+			iconContentOffset: [0, 0],
+		});
+		myMap.geoObjects.add(myPlacemark);
+
+		//myMap.behaviors.disable('scrollZoom');
+		myMap.behaviors.disable('drag');
+	}
+}
+if (document.querySelector('#map')) {
+	map()
+}
+

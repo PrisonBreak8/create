@@ -12,19 +12,25 @@
 	&__button {
 	}
 	&__error {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		color: red;
+		font-size: rem(12);
+		transform: translate(5%, 5px);
 	}
 }
 //========================================================================================================================================================
 .form-flex {
 	display: flex;
-}
-
-.form {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
 	column-gap: rem(25);
 	row-gap: rem(25);
+}
+
+.form {
 	@media (max-width: $mobileSmall) {
 		flex-direction: column;
 		width: 100%;
@@ -71,6 +77,17 @@
 	}
 
 	&__error {
+		//position: absolute;
+		//top: 100%;
+		//left: 0;
+		//color: red;
+		//font-size: rem(12);
+		//transform: translate(5%, 5px);
+	}
+}
+
+.questions__form {
+	&__error {
 		position: absolute;
 		top: 100%;
 		left: 0;
@@ -108,12 +125,11 @@
 		}
 
 		&._form-error {
-			color: red;
-
-			outline-color: red;
-			&::placeholder {
-				color: red;
-			}
+			//color: red;
+			//outline-color: red;
+			//&::placeholder {
+			//	color: red;
+			//}
 		}
 	}
 }
@@ -142,7 +158,7 @@
 
 // <INPUTS>
 // Снипет (HTML): inp
-// @import "input";
+@import "input";
 
 // <CHECK>
 // Снипет (HTML): chk

@@ -1,3 +1,14 @@
-#map {
-	background: url("@img/icons/loading.gif") center / 50px no-repeat;
+.map {
+	//background: url("@img/icons/loading.gif") center / 50px no-repeat;
+	height: rem(410);
+
+	width: 100%;
 }
+
+[class*="copyrights-pane"] {
+	display: none !important;
+}
+
+//[class*="ground-pane"] {
+//	filter: grayscale(1);
+//}

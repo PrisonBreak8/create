@@ -1,10 +1,12 @@
 
-function mapAdd() {
-	let tag = document.createElement('script');
-	tag.src = "https://maps.google.com/maps/api/js?sensor=false&amp;key=&callback=mapInit";
-	let firstScriptTag = document.getElementsByTagName('script')[0];
-	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-}
+//function mapAdd() {
+//	let tag = document.createElement('script');
+//	tag.src = "https://api-maps.yandex.ru/2.1/?apikey=e701bcca-256b-4843-ad6e-12244559ff88&lang=ru_RU";
+//	let firstScriptTag = document.getElementsByTagName('script')[0];
+//	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+//}
+
+/*
 function mapInit(n = 1) {
 	google.maps.Map.prototype.setCenterWithOffset = function (latlng, offsetX, offsetY) {
 		var map = this;
@@ -78,9 +80,11 @@ function mapInit(n = 1) {
 if (document.querySelector('#map')) {
 	mapAdd();
 }
+*/
 
 
-/* YA
+
+/*
 function map(n) {
 	ymaps.ready(init);
 	function init() {
@@ -90,15 +94,15 @@ function map(n) {
 			// Порядок по умолчанию: «широта, долгота».
 			// Чтобы не определять координаты центра карты вручную,
 			// воспользуйтесь инструментом Определение координат.
-			controls: [],
-			center: [43.585525, 39.723062],
+			//controls: [[53.88284739205031, 27.727503000000006]],
+			center: [53.96051558528582, 27.581416088015047],
 			// Уровень масштабирования. Допустимые значения:
 			// от 0 (весь мир) до 19.
-			zoom: 10
+			zoom: 13
 		});
 
-		let myPlacemark = new ymaps.Placemark([43.585525, 39.723062], {
-		},{
+		let myPlacemark = new ymaps.Placemark([53.96071804742197, 27.581416088015047], {
+		}, {
 			// Опции.
 			//balloonContentHeader: 'Mistoun',
 			//balloonContentBody: 'Москва, Николоямская 40с1',
@@ -127,3 +131,5 @@ function map(n) {
 	}
 }
 */
+
+

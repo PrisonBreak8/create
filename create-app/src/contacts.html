@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Createx"
+})
+
+<body>
+	<div class="wrapper">
+		<header class="header header-bg-white">
+			<div class="header__container">
+
+				<div class="header__menu menu">
+
+					<nav class="menu__body">
+						<a href="home.html" class="header__logo" target="_blank"><img src="@img/logo.svg" alt="logo"></a>
+						<ul class="menu__list ">
+							<li class="menu__item "><a href="about.html" class="menu__link" target="_blank">About Us</a></li>
+							<li class="menu__item"><a href="courses.html" class="menu__link" target="_blank">Courses</a></li>
+							<li class="menu__item"><a href="events.html" class="menu__link" target="_blank">Events</a></li>
+							<li class="menu__item"><a href="blog.html" class="menu__link" target="_blank">Blog</a></li>
+							<li class="menu__item"><a href="contacts.html" class="menu__link js-active-link" target="_blank">Contacts</a></li>
+						</ul>
+					</nav>
+
+					<div class="header__actions">
+						<button data-da=".menu__list, 767.98" type="button" class="button button_large button_red">Get consultation</button>
+						<a data-popup="#form-popup" data-da=".menu__list, 479.98" class="header__register" href=""><span class="_icon-user"></span>Log in / Register</a>
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+					</div>
+
+				</div>
+
+			</div>
+		</header>
+
+		<main class="page">
+
+			<section class="page__contacts-info contacts-info">
+				<div class="contacts-info__container">
+
+					<div class="contacts-info__items">
+						<div class="contacts-info__item">
+							<div class="contacts-info__title title">
+								<h2 class="title__label">Contact info</h2>
+								<h3 class="title__value">Get in touch</h3>
+							</div>
+
+							<div class="contacts-info__body">
+								<div class="contacts-info__description">
+									<span class="contacts-info__message contacts-info__message_chat">Talk to us:</span>
+									<a href="mailto:hello@createx.com" class="contacts-info__links">hello@createx.com</a>
+								</div>
+								<div class="contacts-info__description">
+									<span class="contacts-info__message contacts-info__message_iphone">Call us:</span>
+									<a href="tel:4055550128" class="contacts-info__links">(405) 555-0128</a>
+								</div>
+								<div class="contacts-info__description">
+									<span class="contacts-info__message contacts-info__message_solid">Address:</span>
+									<div class="contacts-info__links">2464 Royal Ln. Mesa, New Jersey 45463, USA</div>
+								</div>
+							</div>
+
+							<div class="contacts-info__label">Follow us:</div>
+
+							<ul class="contacts-info__social social">
+								<li class="contacts-info__list"> <a href="#" class="contacts-info__link _icon-facebook"></a></li>
+								<li class="contacts-info__list"> <a href="#" class="contacts-info__link _icon-twitter"></a></li>
+								<li class="contacts-info__list"> <a href="#" class="contacts-info__link _icon-telegram"></a></li>
+								<li class="contacts-info__list"> <a href="#" class="contacts-info__link _icon-Instagram"></a></li>
+								<li class="contacts-info__list"> <a href="#" class="contacts-info__link _icon-linked-In"></a></li>
+								<li class="contacts-info__list"> <a href="#" class="contacts-info__link _icon-vk"></a></li>
+							</ul>
+						</div>
+
+						<div class="contacts-info__map">
+							<div class="map" id="map"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="page__drop drop">
+				<div class="drop__container">
+
+					<div class="drop__picture">
+						<img src="@img/contacts-page/questions-illustration.svg" alt="contacts image">
+					</div>
+
+					<form action="#" class="drop__form">
+						<div class="drop__title title">
+							<h2 class="title__label">Any questions?</h2>
+							<h3 class="title__value">Drop us a line</h3>
+						</div>
+
+						<div class="drop__lines">
+							<div class="drop__line">
+								<div class="drop__chapter">
+									<label class="drop__label" for="n_1">First Name*</label>
+								</div>
+								<input data-required="" data-placeholder-nohide="" id="n_1" autocomplete="off" type="text" name="form[]" data-error="Please enter a name" placeholder="Your first name" class="drop__input ">
+							</div>
+
+							<div class="drop__line">
+								<div class="drop__chapter">
+									<label class="drop__label" for="n_2">Last Name*</label>
+								</div>
+								<input data-required="" data-placeholder-nohide="" id="n_2" autocomplete="off" type="text" name="form[]" data-error="Please enter last name" placeholder="Your last name" class="drop__input ">
+							</div>
+
+							<div class="drop__line">
+								<div class="drop__chapter">
+									<label class="drop__label" for="email_2">Email*</label>
+								</div>
+								<input data-required="email" data-placeholder-nohide="" id="email_2" autocomplete="off" type="email" name="form[]" data-error="Enter your email" placeholder="Your working email"
+									class="drop__input">
+							</div>
+
+							<div class="drop__line">
+								<div class="drop__chapter">
+									<label class="drop__label" for="phhone_1">Phone*</label>
+								</div>
+								<input data-required="" data-placeholder-nohide="" id="phhone_1" data-tel="" autocomplete="off" type="tel" name="form[]" data-error="Enter your phone" placeholder="Your phone number"
+									class="drop__input ">
+							</div>
+
+							<div class="drop__line">
+								<div class="drop__chapter">
+									<label class="drop__label" for="textarea">Message*</label>
+								</div>
+								<textarea data-required="" id="textarea" class="drop__textarea" placeholder="Your message" data-error="Please enter your message" name="textarea" data-placeholder="Your message"></textarea>
+							</div>
+
+							<div class="drop__block">
+								<div class="drop__checkbox checkbox">
+									<input id="c_2" class="checkbox__input" type="checkbox" value="1" name="form[]">
+									<label for="c_2" class="checkbox__label">
+										<span class="checkbox__text">
+											I agree to receive communications from Createx Online School
+										</span>
+									</label>
+								</div>
+								<div class="drop__btn">
+									<button type="submit" class="button button_padding  button_red">Send message</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
+
+		</main>
+
+		@@include('html/_footer.htm',{})
+	</div>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=e701bcca-256b-4843-ad6e-12244559ff88&lang=ru_RU"></script>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
