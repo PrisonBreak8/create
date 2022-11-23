@@ -1654,10 +1654,10 @@
   function k(e, t) {
     return void 0 === t && (t = 0), setTimeout(e, t);
   }
-  function _() {
+  function O() {
     return Date.now();
   }
-  function O(e, t) {
+  function _(e, t) {
     void 0 === t && (t = "x");
     const s = y();
     let i, n, a;
@@ -2458,7 +2458,7 @@
       const { params: t, rtlTranslate: s, translate: i, $wrapperEl: n } = this;
       if (t.virtualTranslate) return s ? -i : i;
       if (t.cssMode) return i;
-      let a = O(n[0], e);
+      let a = _(n[0], e);
       return s && (a = -a), a || 0;
     },
     setTranslate: function (e, t) {
@@ -3026,7 +3026,7 @@
       }),
       (l.startX = u),
       (l.startY = h),
-      (n.touchStartTime = _()),
+      (n.touchStartTime = O()),
       (t.allowClick = !0),
       t.updateSize(),
       (t.swipeDirection = void 0),
@@ -3080,7 +3080,7 @@
         void (
           i.isTouched &&
           (Object.assign(a, { startX: d, startY: p, currentX: d, currentY: p }),
-          (i.touchStartTime = _()))
+          (i.touchStartTime = O()))
         )
       );
     if (i.isTouchEvent && n.touchReleaseOnEdges && !n.loop)
@@ -3234,7 +3234,7 @@
       s.isTouched &&
       (!0 === t.allowSlideNext || !0 === t.allowSlidePrev) &&
       t.setGrabCursor(!1);
-    const c = _(),
+    const c = O(),
       d = c - s.touchStartTime;
     if (t.allowClick) {
       const e = o.path || (o.composedPath && o.composedPath());
@@ -3245,7 +3245,7 @@
           t.emit("doubleTap doubleClick", o);
     }
     if (
-      ((s.lastClickTime = _()),
+      ((s.lastClickTime = O()),
       k(() => {
         t.destroyed || (t.allowClick = !0);
       }),
@@ -3886,7 +3886,7 @@
             startTranslate: void 0,
             allowThresholdMove: void 0,
             focusableElements: a.params.focusableElements,
-            lastClickTime: _(),
+            lastClickTime: O(),
             clickTimeout: void 0,
             velocities: [],
             allowMomentumBounce: void 0,
@@ -4854,17 +4854,17 @@
   }, 0);
   const ye = document.querySelectorAll(".menu__link");
   if ((console.log(ye), ye)) {
-    function _e() {
+    function Oe() {
       ye.forEach((e) => e.classList.remove("js-active-link")),
         this.classList.add("js-active-link");
     }
-    ye.forEach((e) => e.addEventListener("click", _e));
+    ye.forEach((e) => e.addEventListener("click", Oe));
   }
   const we = document.querySelector(".list"),
     Ce = document.querySelectorAll(".blocks__item"),
     Ee = document.querySelectorAll(".list__item");
   if (we) {
-    function Oe() {
+    function _e() {
       we.addEventListener("click", (e) => {
         const t = e.target.dataset.id,
           s = e.target;
@@ -4897,7 +4897,7 @@
           : (t.style.display = "none");
       });
     }
-    Oe();
+    _e();
   }
   let Te = document.querySelector(".button-load");
   const xe = document.querySelectorAll(".js-hidden");
@@ -4992,7 +4992,27 @@
         }
       });
   }
-  (window.PrisonBreak = !0),
+  document.querySelector("#map") &&
+    ymaps.ready(function () {
+      let e = new ymaps.Map("map", {
+          center: [34.78218143888964, 135.48873970312502],
+          zoom: 7,
+        }),
+        t = new ymaps.Placemark(
+          [34.78218143888964, 135.48873970312502],
+          {},
+          {
+            hasBalloon: !1,
+            hideIconOnBalloonOpen: !1,
+            iconLayout: "default#imageWithContent",
+            iconImageSize: [40, 40],
+            iconImageOffset: [-20, -20],
+            iconContentOffset: [0, 0],
+          }
+        );
+      e.geoObjects.add(t), e.behaviors.disable("drag");
+    }),
+    (window.PrisonBreak = !0),
     (function (e) {
       let t = new Image();
       (t.onload = t.onerror =
