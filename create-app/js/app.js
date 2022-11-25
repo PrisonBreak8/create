@@ -1654,10 +1654,10 @@
   function k(e, t) {
     return void 0 === t && (t = 0), setTimeout(e, t);
   }
-  function O() {
+  function _() {
     return Date.now();
   }
-  function _(e, t) {
+  function O(e, t) {
     void 0 === t && (t = "x");
     const s = y();
     let i, n, a;
@@ -2458,7 +2458,7 @@
       const { params: t, rtlTranslate: s, translate: i, $wrapperEl: n } = this;
       if (t.virtualTranslate) return s ? -i : i;
       if (t.cssMode) return i;
-      let a = _(n[0], e);
+      let a = O(n[0], e);
       return s && (a = -a), a || 0;
     },
     setTranslate: function (e, t) {
@@ -3026,7 +3026,7 @@
       }),
       (l.startX = u),
       (l.startY = h),
-      (n.touchStartTime = O()),
+      (n.touchStartTime = _()),
       (t.allowClick = !0),
       t.updateSize(),
       (t.swipeDirection = void 0),
@@ -3080,7 +3080,7 @@
         void (
           i.isTouched &&
           (Object.assign(a, { startX: d, startY: p, currentX: d, currentY: p }),
-          (i.touchStartTime = O()))
+          (i.touchStartTime = _()))
         )
       );
     if (i.isTouchEvent && n.touchReleaseOnEdges && !n.loop)
@@ -3234,7 +3234,7 @@
       s.isTouched &&
       (!0 === t.allowSlideNext || !0 === t.allowSlidePrev) &&
       t.setGrabCursor(!1);
-    const c = O(),
+    const c = _(),
       d = c - s.touchStartTime;
     if (t.allowClick) {
       const e = o.path || (o.composedPath && o.composedPath());
@@ -3245,7 +3245,7 @@
           t.emit("doubleTap doubleClick", o);
     }
     if (
-      ((s.lastClickTime = O()),
+      ((s.lastClickTime = _()),
       k(() => {
         t.destroyed || (t.allowClick = !0);
       }),
@@ -3886,7 +3886,7 @@
             startTranslate: void 0,
             allowThresholdMove: void 0,
             focusableElements: a.params.focusableElements,
-            lastClickTime: O(),
+            lastClickTime: _(),
             clickTimeout: void 0,
             velocities: [],
             allowMomentumBounce: void 0,
@@ -4841,6 +4841,20 @@
             prevEl: ".testimonials__arrow_left",
           },
           on: {},
+        }),
+      document.querySelector(".interested__slider") &&
+        new he(".interested__slider", {
+          modules: [fe],
+          observer: !0,
+          observeParents: !0,
+          slidesPerView: 1,
+          spaceBetween: 30,
+          speed: 800,
+          navigation: {
+            nextEl: ".interested__arrow_right",
+            prevEl: ".interested__arrow_left",
+          },
+          on: {},
         });
   });
   let Se = !1;
@@ -4854,17 +4868,17 @@
   }, 0);
   const ye = document.querySelectorAll(".menu__link");
   if ((console.log(ye), ye)) {
-    function Oe() {
+    function _e() {
       ye.forEach((e) => e.classList.remove("js-active-link")),
         this.classList.add("js-active-link");
     }
-    ye.forEach((e) => e.addEventListener("click", Oe));
+    ye.forEach((e) => e.addEventListener("click", _e));
   }
   const we = document.querySelector(".list"),
     Ce = document.querySelectorAll(".blocks__item"),
     Ee = document.querySelectorAll(".list__item");
   if (we) {
-    function _e() {
+    function Oe() {
       we.addEventListener("click", (e) => {
         const t = e.target.dataset.id,
           s = e.target;
@@ -4897,7 +4911,7 @@
           : (t.style.display = "none");
       });
     }
-    _e();
+    Oe();
   }
   let Te = document.querySelector(".button-load");
   const xe = document.querySelectorAll(".js-hidden");

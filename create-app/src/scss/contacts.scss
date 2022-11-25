@@ -1,0 +1,242 @@
+//========================================================================================================================================================
+.contacts-info {
+	@include adaptiveValue("padding-top", 110, 40);
+	@include adaptiveValue("padding-bottom", 90, 40);
+	// .contacts-info__container
+	&__container {
+	}
+	// .contacts-info__items
+	&__items {
+		display: grid;
+		grid-template-columns: minmax(300px, 705px);
+		align-items: end;
+		column-gap: rem(30);
+		row-gap: rem(30);
+		justify-content: center;
+		@media (min-width: em(1085)) {
+			grid-template-columns: auto 1fr;
+			min-width: 100%;
+		}
+	}
+	// .contacts-info__item
+	&__item {
+	}
+	// .contacts-info__title
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 25);
+		}
+	}
+	// .contacts-info__body
+	&__body {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(25);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 20, 1230, 991, 1);
+		}
+	}
+	// .contacts-info__description
+	&__description {
+		display: flex;
+		flex-direction: column;
+	}
+	// .contacts-info__message
+	&__message {
+		display: flex;
+		column-gap: rem(12);
+		align-items: center;
+		font-weight: 700;
+		font-size: rem(14);
+		line-height: math.div(21, 14);
+		color: $grayColor;
+		&:not(:last-child) {
+			margin-bottom: rem(5);
+		}
+		&_chat,
+		&_iphone,
+		&_solid {
+			&:before {
+				font-size: 24px;
+				color: $hoverColor;
+			}
+		}
+
+		// contacts-info__message_chat
+		&_chat {
+			&:before {
+				@extend %ic;
+				content: "\e909";
+			}
+		}
+		// contacts-info__message_iphone
+		&_iphone {
+			&:before {
+				@extend %ic;
+				content: "\e924";
+			}
+		}
+		// contacts-info__message_solid
+		&_solid {
+			&:before {
+				@extend %ic;
+				content: "\e946";
+			}
+		}
+	}
+	// .contacts-info__links
+	&__links {
+		padding-left: rem(35);
+		font-size: 18px;
+		line-height: math.div(27, 18);
+		color: $titleColor;
+		transition: color 0.2s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $hoverColor;
+			}
+		}
+	}
+	// .contacts-info__label
+	&__label {
+		font-weight: 700;
+		line-height: math.div(24, 16);
+		letter-spacing: em(1, 16);
+		text-transform: uppercase;
+		color: $titleColor;
+		&:not(:last-child) {
+			margin-bottom: rem(25);
+		}
+	}
+	// .contacts-info__social
+	&__social {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		column-gap: rem(25);
+	}
+	// .contacts-info__list
+	&__list {
+	}
+	// .contacts-info__link
+	&__link {
+		font-size: rem(24);
+		color: $titleColor;
+		transition: color 0.2s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $hoverColor;
+			}
+		}
+	}
+
+	// contacts-info__map
+	&__map {
+	}
+}
+//========================================================================================================================================================
+.drop {
+	@include adaptiveValue("padding-top", 90, 40);
+	@include adaptiveValue("padding-bottom", 180, 40);
+	// .drop__container
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		column-gap: rem(30);
+
+		@media (max-width: $tablet) {
+			flex-direction: column;
+		}
+	}
+	// .drop__picture
+	&__picture {
+		flex: 0 0 auto;
+		@media (max-width: $tablet) {
+			display: none;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			max-width: 435px;
+			max-height: 481px;
+			-o-object-fit: contain;
+			object-fit: contain;
+		}
+	}
+	// .drop__form
+	&__form {
+		max-width: rem(705);
+		width: 100%;
+		@media (max-width: $tablet) {
+			min-width: 100%;
+		}
+	}
+	// .drop__title
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 25);
+		}
+	}
+	// .drop__lines
+	&__lines {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: rem(25);
+		row-gap: rem(25);
+		@media (max-width: $mobile) {
+			flex-direction: column;
+		}
+	}
+	// .drop__line
+	&__line {
+		flex: 1 1 calc(50% - 25px);
+	}
+	// .drop__chapter
+	&__chapter {
+	}
+	// .drop__label
+	&__label {
+		line-height: math.div(26, 16);
+		padding-bottom: rem(8);
+		cursor: pointer;
+	}
+	// .drop__input
+	&__input {
+	}
+	// .drop__textarea
+	&__textarea {
+		padding: rem(15);
+		background: #fff;
+		min-height: rem(130);
+		max-height: rem(220);
+		width: 100%;
+		resize: vertical;
+		border: 1px solid #d7dadd;
+		border-radius: 4px;
+		&::placeholder {
+			color: #9a9ca5;
+		}
+	}
+	// .drop__block
+	&__block {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: rem(20);
+		row-gap: rem(15);
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	// .drop__checkbox
+	&__checkbox {
+		max-width: rem(315);
+		@media (max-width: $mobile) {
+			min-width: 100%;
+		}
+	}
+	// .drop__btn
+	&__btn {
+	}
+}
