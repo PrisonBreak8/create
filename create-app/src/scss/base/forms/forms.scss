@@ -69,33 +69,8 @@
 			width: 100%;
 		}
 	}
-	// .form__btn-block
-	&__btn-block {
-	}
-	// .form__button
-	&__button {
-	}
-
-	&__error {
-		//position: absolute;
-		//top: 100%;
-		//left: 0;
-		//color: red;
-		//font-size: rem(12);
-		//transform: translate(5%, 5px);
-	}
 }
 
-.questions__form {
-	&__error {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		color: red;
-		font-size: rem(12);
-		transform: translate(5%, 5px);
-	}
-}
 //========================================================================================================================================================
 .footer {
 	// .footer__form
@@ -123,14 +98,6 @@
 			color: #fff;
 			opacity: 0.6;
 		}
-
-		&._form-error {
-			//color: red;
-			//outline-color: red;
-			//&::placeholder {
-			//	color: red;
-			//}
-		}
 	}
 }
 .button {
@@ -149,7 +116,51 @@
 		}
 	}
 }
+//========================================================================================================================================================
 
+.dont-miss {
+	// .dont-miss__form
+	&__form {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(25);
+	}
+
+	// .dont-miss__line
+	&__line {
+		position: relative;
+	}
+	// .dont-miss__chapter
+	&__chapter {
+	}
+	// .dont-miss__label
+	&__label {
+		cursor: pointer;
+	}
+	// .dont-miss__input
+	&__input {
+		outline-color: green;
+		border-radius: 0 !important;
+		height: rem(52);
+		min-width: 100%;
+		display: block;
+		padding: 0px 15px;
+		border: 1px solid #eee;
+		color: #000;
+
+		&::placeholder {
+			color: #9a9ca5;
+		}
+
+		&._form-error {
+			color: red;
+			&::placeholder {
+				color: red;
+			}
+		}
+	}
+}
+//========================================================================================================================================================
 //</FORM>
 
 // <BUTTONS>

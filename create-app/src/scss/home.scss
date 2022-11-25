@@ -1,17 +1,64 @@
 //====================================================================================================
 .main-section {
 	position: relative;
-	z-index: 5;
 	background-color: $nextBgColor;
 	min-height: 100vh;
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		@media (max-width: $tablet) {
+			display: none;
+		}
+	}
+	&::before {
+		background-image: url("../img/decor/decor-circle.svg");
+		background-repeat: no-repeat;
+		height: 185px;
+		width: 185px;
+		bottom: 0;
+		left: 0;
+		opacity: 0.2;
+	}
+	&::after {
+		background-image: (url("../img/decor/shapes1.svg"));
+		background-repeat: no-repeat;
+		height: 86px;
+		width: 96px;
+		top: 10%;
+		left: 8%;
+	}
 
 	// .main-section__container
 	&__container {
-		position: relative;
 		display: flex;
 		flex-direction: column;
 		@include adaptiveValue("padding-top", 120, 80, 1230, 767, 1);
 		z-index: 5;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			@media (max-width: $tablet) {
+				display: none;
+			}
+		}
+		&::before {
+			background-image: url("../img/decor/decor-oval.svg");
+			background-repeat: no-repeat;
+			height: 61px;
+			width: 61px;
+			bottom: 25%;
+			left: 30%;
+		}
+		&::after {
+			background-image: url("../img/decor/dots-decor.svg");
+			background-repeat: no-repeat;
+			height: 145px;
+			width: 160px;
+			bottom: 50%;
+			right: 0;
+		}
 	}
 	// .main-section__body
 	&__body {
@@ -548,31 +595,6 @@
 			width: 100%;
 		}
 	}
-
-	// .events__box
-	&__box {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		column-gap: rem(40);
-		row-gap: rem(20);
-		@media (max-width: $mobileSmall) {
-			flex-direction: column;
-		}
-	}
-	// .events__more
-	&__more {
-		font-weight: 700;
-		@include adaptiveValue("font-size", 28, 20);
-		line-height: math.div(42, 28);
-		color: $titleColor;
-	}
-
-	// .events__btn
-	&__btn {
-		display: flex;
-		flex: 0 0 auto;
-	}
 }
 //========================================================================================================================================================
 .certificate {
@@ -674,30 +696,8 @@
 		}
 	}
 
-	// .tutors__controls
-	&__controls {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		column-gap: rem(10);
-	}
 	// .tutors__arrow
 	&__arrow {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: rem(48);
-		height: rem(48);
-		border-radius: 50%;
-		transition: background-color 0.3s ease, color 0.3s ease;
-		font-size: rem(18);
-
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: #ff3f3a;
-				color: #fff;
-			}
-		}
 		// .tutors__arrow_left
 		&_left {
 			transform: rotate(-180deg);
@@ -705,23 +705,12 @@
 		// .tutors__arrow_right
 		&_right {
 		}
-
-		&.swiper-button-disabled {
-			opacity: 0.5;
-			cursor: default;
-		}
 	}
 	// .tutors__slider
 	&__slider {
 		@media (max-width: em(568)) {
 			//margin-left: rem(-15);
 		}
-	}
-	// .tutors__wrapper
-	&__wrapper {
-	}
-	// .tutors__slide
-	&__slide {
 	}
 }
 

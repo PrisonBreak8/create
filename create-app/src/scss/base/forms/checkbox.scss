@@ -25,7 +25,6 @@
 		position: relative;
 		gap: 10px;
 		&:before {
-			content: "";
 			@extend %ic;
 			content: "\e903";
 			display: inline-flex;
@@ -37,6 +36,7 @@
 			width: 20px;
 			height: 20px;
 			border: 1px solid #a7a9ac;
+			background-color: #fff;
 		}
 	}
 	// .checkbox__text

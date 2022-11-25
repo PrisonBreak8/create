@@ -21,30 +21,244 @@
 	<button type="button" class="button button_small button_gradient">Small Button</button>
 </div>
 
-<!-- 
-		background-image: linear-gradient(
-		35deg,
-		hsl(19deg 96% 90%) 0%,
-		hsl(20deg 100% 86%) 14%,
-		hsl(21deg 100% 82%) 40%,
-		hsl(22deg 100% 77%) 62%,
-		hsl(22deg 100% 73%) 78%,
-		hsl(22deg 100% 69%) 88%,
-		hsl(22deg 100% 64%) 95%,
-		hsl(22deg 100% 59%) 100%
-	);
-	background-size: 400% 400%;
-	animation: animateBackground 10s infinite ease-in-out;
+<section class="page__other other">
+	<div class="other__container">
 
-	@keyframes animateBackground {
-		0% {
-			background-position: 0 50%;
-		}
-		50% {
-			background-position: 100% 50%;
-		}
-		100% {
-			background-position: 0 50%;
-		}
-	}
+		<div class="other__header">
+			<div class="other__title title">
+				<h2 class="title__label">Check other courses</h2>
+				<h3 class="title__value">You may also like</h3>
+			</div>
+
+			<div class="other__controls">
+				<button type="button" class="other__arrow other__arrow_left _icon-arrow-right"></button>
+				<button type="button" class="other__arrow other__arrow_right _icon-arrow-right"></button>
+			</div>
+		</div>
+
+		<div class="other__slider swiper">
+			<div class="other__wrapper swiper-wrapper">
+				<div class="other__slide swiper-slide">
+					<article class="cards__card">
+						<a href="#" class="cards__picture">
+							<img src="@img/home-page/featured-courses/featured-courses1.png" alt="The Ultimate Google Ads Training Course">
+						</a>
+
+						<div class="cards__description">
+							<div class="cards__job">
+								<h3 class="cards__job-title cards__job-title_marketing">Marketing</h3>
+							</div>
+							<a class="cards__job-sub-title" href="#">The Ultimate Google Ads Training Course </a>
+
+							<div class="cards__footer">
+								<div class="cards__price">$100</div>
+								<div class="cards__name">by Jerome Bell</div>
+							</div>
+
+						</div>
+					</article>
+				</div>
+
+				<div class="other__slide swiper-slide">
+					<article class="cards__card">
+						<a href="#" class="cards__picture">
+							<img src="@img/home-page/featured-courses/featured-courses2.png" alt="HR Management and Analytics">
+						</a>
+
+						<div class="cards__description">
+							<div class="cards__job">
+								<h3 class="cards__job-title cards__job-title_recruting">Marketing</h3>
+							</div>
+							<a class="cards__job-sub-title" href="#">HR Management and Analytics</a>
+
+							<div class="cards__footer">
+								<div class="cards__price">$200</div>
+								<div class="cards__name">by Leslie Alexander Li</div>
+							</div>
+
+						</div>
+					</article>
+				</div>
+
+				<div class="other__slide swiper-slide">
+					<article class="cards__card">
+						<a href="#" class="cards__picture">
+							<img src="@img/home-page/featured-courses/featured-courses3.png" alt="HR Management and Analytics">
+						</a>
+
+						<div class="cards__description">
+							<div class="cards__job">
+								<h3 class="cards__job-title cards__job-title_management">Management</h3>
+							</div>
+							<a class="cards__job-sub-title" href="#">Business Development Management</a>
+
+							<div class="cards__footer">
+								<div class="cards__price">$400</div>
+								<div class="cards__name">by Dianne Russell</div>
+							</div>
+
+						</div>
+					</article>
+				</div>
+
+				<div class="other__slide swiper-slide">
+					<article class="cards__card">
+						<a href="#" class="cards__picture">
+							<img src="@img/home-page/featured-courses/featured-courses4.png" alt="HR Management and Analytics">
+						</a>
+
+						<div class="cards__description">
+							<div class="cards__job">
+								<h3 class="cards__job-title cards__job-title_management">Management</h3>
+							</div>
+							<a class="cards__job-sub-title" href="#">Prduct Management Fundamentals</a>
+
+							<div class="cards__footer">
+								<div class="cards__price">$480</div>
+								<div class="cards__name">by Marvin McKinneyl</div>
+							</div>
+
+						</div>
+					</article>
+				</div>
+
+				<div class="other__slide swiper-slide">
+					<article class="cards__card">
+						<a href="#" class="cards__picture">
+							<img src="@img/home-page/featured-courses/featured-courses5.png" alt="The Ultimate Google Ads Training Course">
+						</a>
+
+						<div class="cards__description">
+							<div class="cards__job">
+								<h3 class="cards__job-title cards__job-title_marketing">Marketing</h3>
+							</div>
+							<a class="cards__job-sub-title" href="#">Brand Management & PR Communications</a>
+
+							<div class="cards__footer">
+								<div class="cards__price">$530</div>
+								<div class="cards__name">by Kristin Watson</div>
+							</div>
+
+						</div>
+					</article>
+				</div>
+
+				<div class="other__slide swiper-slide">
+					<article class="cards__card">
+						<a href="#" class="cards__picture">
+							<img src="@img/home-page/featured-courses/featured-courses6.png" alt="The Ultimate Google Ads Training Course">
+						</a>
+
+						<div class="cards__description">
+							<div class="cards__job">
+								<h3 class="cards__job-title cards__job-title_design">Design</h3>
+							</div>
+							<a class="cards__job-sub-title" href="#">Graphic Design Basic</a>
+
+							<div class="cards__footer">
+								<div class="cards__price">$500</div>
+								<div class="cards__name">by Guy Hawkins</div>
+							</div>
+
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+
+		<div class="other__box">
+			<div class="other__more">Do you want more courses?</div>
+			<form class="other__button" action="donate.html" target="_blank">
+				<button type="button" class="button button_large button_red">View all courses</button>
+			</form>
+		</div>
+
+	</div>
+</section>
+<!-- 
+.other {
+// .other__container
+&__container {
+}
+// .other__header
+&__header {
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+column-gap: rem(20);
+&:not(:last-child) {
+@include adaptiveValue("margin-bottom", 60, 25);
+}
+}
+// .other__title
+&__title {
+}
+// .other__controls
+&__controls {
+display: flex;
+align-items: center;
+justify-content: space-between;
+column-gap: rem(10);
+}
+// .other__arrow
+&__arrow {
+display: flex;
+align-items: center;
+justify-content: center;
+width: rem(48);
+height: rem(48);
+border-radius: 50%;
+transition: background-color 0.3s ease, color 0.3s ease;
+font-size: rem(18);
+
+@media (any-hover: hover) {
+&:hover {
+background-color: #ff3f3a;
+color: #fff;
+}
+}
+// .other__arrow_left
+&_left {
+transform: rotate(-180deg);
+}
+// .other__arrow_right
+&_right {
+}
+&.swiper-button-disabled {
+opacity: 0.5;
+cursor: default;
+}
+}
+// .other__slider
+&__slider {
+}
+// .other__wrapper
+&__wrapper {
+}
+// .other__slide
+&__slide {
+}
+// .other__box
+&__box {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+column-gap: rem(40);
+row-gap: rem(20);
+@media (max-width: $mobileSmall) {
+flex-direction: column;
+}
+}
+// .other__more
+&__more {
+font-weight: 700;
+@include adaptiveValue("font-size", 28, 20);
+line-height: math.div(42, 28);
+color: $titleColor;
+}
+// .other__button
+&__button {
+}
+}
  -->

@@ -194,6 +194,7 @@
 		display: flex;
 		justify-content: flex-start;
 		flex-wrap: nowrap;
+		row-gap: rem(25);
 		@media (max-width: em(1100)) {
 			flex-wrap: wrap;
 		}
