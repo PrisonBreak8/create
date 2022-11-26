@@ -88,6 +88,21 @@
 	// .page__dont-miss
 	&__dont-miss {
 	}
+	// .page__other
+	&__other {
+	}
+	// .page__the-course
+	&__the-course {
+	}
+	// .page__main-steps
+	&__main-steps {
+	}
+	// .page__discount
+	&__discount {
+	}
+	// .page__course-program
+	&__course-program {
+	}
 }
 //========================================================================================================================================================
 .header-bg-red {
@@ -140,7 +155,7 @@
 		letter-spacing: em(1, 16);
 		text-transform: uppercase;
 		color: $titleColor;
-
+		@include adaptiveValue("font-size", 16, 14);
 		display: flex;
 		align-items: center;
 		gap: rem(10);
@@ -158,6 +173,13 @@
 		// title__label_center
 		&_center {
 			justify-content: center;
+		}
+		// title__label_color-red
+		&_color-red {
+			color: #ff3f3a;
+			&::before {
+				background-color: #ff3f3a;
+			}
 		}
 	}
 	// .title__value

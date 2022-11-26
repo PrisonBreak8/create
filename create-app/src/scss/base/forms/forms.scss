@@ -70,7 +70,6 @@
 		}
 	}
 }
-
 //========================================================================================================================================================
 .footer {
 	// .footer__form
@@ -117,7 +116,6 @@
 	}
 }
 //========================================================================================================================================================
-
 .dont-miss {
 	// .dont-miss__form
 	&__form {
@@ -160,6 +158,67 @@
 		}
 	}
 }
+//========================================================================================================================================================
+.discount {
+	// .discount__form
+	&__form {
+	}
+	// .discount__lines
+	&__lines {
+		display: flex;
+		align-items: flex-end;
+		flex-wrap: wrap;
+		column-gap: rem(25);
+		@include adaptiveValue("column-gap", 25, 10, 1230, 1100, 1);
+		row-gap: rem(25);
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	// .discount__line
+	&__line {
+		position: relative;
+		width: 100%;
+		flex: calc(25% - 25px);
+	}
+	// .discount__chapter
+	&__chapter {
+	}
+	// .discount__label
+	&__label {
+		font-size: 14px;
+		line-height: math.div(21, 14);
+		padding-bottom: rem(5);
+		cursor: pointer;
+	}
+	// .discount__input
+	&__input {
+		outline-color: green;
+		border-radius: 0 !important;
+		height: rem(44);
+		min-width: 100%;
+		display: block;
+		padding: 0px 15px;
+		border: 1px solid #eee;
+		color: #000;
+
+		&::placeholder {
+			color: #9a9ca5;
+		}
+
+		&._form-error {
+			color: red;
+			&::placeholder {
+				color: red;
+			}
+		}
+	}
+	// .discount__join
+	&__join {
+	}
+}
+
 //========================================================================================================================================================
 //</FORM>
 

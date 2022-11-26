@@ -62,7 +62,7 @@
 	border-radius: rem(5);
 	border: 1px solid #eee;
 }
-
+//========================================================================================================================================================
 .talk {
 	// .talk__spollers
 	&__spollers {
@@ -99,27 +99,26 @@
 			cursor: pointer;
 			&::before,
 			&::after {
-				content: "";
 				position: absolute;
-				left: 10px;
-				top: 50%;
-				background-color: #ff3f3a;
-				height: 2px;
-				width: 12px;
+				left: 3px;
+				top: 28%;
+				color: #ff3f3a;
+				height: 20px;
+				width: 20px;
 				transition: transform 0.5s ease 0s;
 			}
 			&::before {
-				transform: translate(-75%, -50%) rotate(40deg);
+				@extend %ic;
+				content: "\e93d";
 			}
 			&::after {
-				transform: translate(0, -50%) rotate(-40deg);
 			}
 			&._spoller-active {
 				&::before {
-					transform: translateX(-75%) rotate(-40deg);
+					@extend %ic;
+					content: "\e933";
 				}
 				&::after {
-					transform: rotate(40deg);
 				}
 			}
 		}
@@ -129,7 +128,83 @@
 		padding: rem(15) rem(15) rem(20) rem(35);
 		border-top: 1px solid #ff3f3a;
 		max-width: rem(605);
+		line-height: math.div(26, 16);
+	}
+}
+//========================================================================================================================================================
+.course-program {
+	// .course-program__spollers
+	&__spollers {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 20, 10);
+		}
+	}
+	// .course-program__item
+	&__item {
+	}
+	// .course-program__header
+	&__header {
+		position: relative;
+		max-width: rem(605);
+		text-align: left;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-right: 5px;
+		padding-left: 30px;
+		cursor: default;
 
+		font-weight: 700;
+		@include adaptiveValue("font-size", 20, 16);
+		line-height: math.div(30, 20);
+
+		color: $titleColor;
+		span {
+			@include adaptiveValue("font-size", 20, 16);
+			line-height: math.div(30, 20);
+			padding-right: rem(5);
+			color: #ff3f3a;
+			@media (max-width: $mobile) {
+				display: none;
+			}
+		}
+		._spoller-init & {
+			cursor: pointer;
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				left: 3px;
+				top: 28%;
+				color: #ff3f3a;
+				height: 20px;
+				width: 20px;
+				transition: transform 0.5s ease 0s;
+			}
+			&::before {
+				@extend %ic;
+				content: "\e93d";
+				//transform: translate(-75%, -50%) rotate(40deg);
+			}
+			&::after {
+				//transform: translate(0, -50%) rotate(-40deg);
+			}
+			&._spoller-active {
+				&::before {
+					@extend %ic;
+					content: "\e933";
+					//transform: translateX(-75%) rotate(-40deg);
+				}
+				&::after {
+					//transform: rotate(40deg);
+				}
+			}
+		}
+	}
+	// .course-program__body
+	&__body {
+		padding: rem(15) rem(15) rem(20) rem(40);
+		border-top: 1px solid #ff3f3a;
+		max-width: rem(605);
 		line-height: math.div(26, 16);
 	}
 }

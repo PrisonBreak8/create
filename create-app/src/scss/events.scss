@@ -554,26 +554,13 @@
 			@include adaptiveValue("margin-bottom", 40, 25);
 		}
 	}
-	// .dont-miss__form
-	&__form {
-	}
-	// .dont-miss__line
-	&__line {
-	}
+
 	// .dont-miss__chapter
 	&__chapter {
 		line-height: math.div(26, 16);
 		padding-bottom: rem(8);
 	}
-	// .dont-miss__label
-	&__label {
-	}
-	// .dont-miss__input
-	&__input {
-	}
-	// .dont-miss__btn
-	&__btn {
-	}
+
 	// .dont-miss__sub-text
 	&__sub-text {
 	}
