@@ -1,0 +1,71 @@
+<div id="form-popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+
+			<form class="popup__form form" action="#">
+
+				<button data-close type="button" class="popup__close">&#10006;</button>
+				<div class="popup__title">Sign in</div>
+				<p class="popup__sub-title">
+					Sign in to your account using email and password provided during registration
+				</p>
+
+				<div class="popup__items">
+
+					<div class="popup__item">
+						<div class="popup__chapter">
+							<label for="email-popup" class="popup__label">Email</label>
+						</div>
+						<input data-required="" data-placeholder-nohide="" id="email-popup" autocomplete="off" type="password" name="form[]" data-error="Please enter email" placeholder="Your working email"
+							class="popup__input">
+					</div>
+
+					<div class="popup__item">
+						<div class="popup__chapter">
+							<label for="password-popup" class="popup__label">Password</label>
+						</div>
+						<input data-required="" data-placeholder-nohide="" id="password-popup" autocomplete="off" type="password" name="form[]" data-error="Please enter password" placeholder="Your working password"
+							class="popup__input">
+						<div class="popup__eye">
+							<button type="button" class="popup__icon _icon-eye"></button>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="popup__keep keep">
+
+					<div class="keep__checkbox">
+						<input data-required="" id="keep-popup" class="checkbox__input" type="checkbox" value="1" name="form[]">
+						<label for="keep-popup" class="checkbox__label">
+							<span class="checkbox__text">Keep me signed in</span>
+						</label>
+					</div>
+
+					<a class="keep__link" href="#">Forgot password?</a>
+
+				</div>
+
+				<div class="popup__sign-in">
+					<button type="submit" class="button button_large button_red _fw">Sign in</button>
+				</div>
+
+				<div class="popup__text">
+					<span>Don't have an account?</span>
+					<a data-dev="" data-popup="#" href="#" class="popup__text-link">Sign up</a>
+				</div>
+
+				<div class="popup__or-sign">Or sign in with</div>
+
+				<ul class="popup__social-items ">
+					<li class="popup__social-item"> <a class="popup__social-link _icon-facebook" href="#"></a></li>
+					<li class="popup__social-item"> <a class="popup__social-link _icon-google" href="#"></a></li>
+					<li class="popup__social-item"> <a class="popup__social-link _icon-twitter1" href="#"></a></li>
+					<li class="popup__social-item"> <a class="popup__social-link _icon-linked-In" href="#"></a></li>
+				</ul>
+
+			</form>
+
+		</div>
+	</div>
+</div>

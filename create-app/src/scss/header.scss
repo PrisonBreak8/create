@@ -1,0 +1,222 @@
+//====================================================================================================
+.header {
+	//position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 100;
+	min-height: rem(52);
+	@include adaptiveValue("padding-top", 20, 10, 1230, 992, 1);
+	@include adaptiveValue("padding-bottom", 20, 10, 1230, 992, 1);
+
+	// .header__menu
+	&__menu {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	// .header__logo
+	&__logo {
+		z-index: 3;
+		@include adaptiveValue("margin-right", 60, 25, 1230, 992, 1);
+		img {
+			@include adaptiveValue("width", 130, 110, 1230, 992, 1);
+		}
+	}
+	// .header__actions
+	&__actions {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("column-gap", 36, 15, 1230, 992, 1);
+		z-index: 3;
+	}
+	// .header__register
+	&__register {
+		display: flex;
+		gap: rem(8);
+		font-weight: 700;
+		line-height: 1.6;
+		z-index: 3;
+		transition: color 0.2s ease-in;
+		@media (max-width: $mobileSmall) {
+			font-size: rem(20);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $hoverColor;
+			}
+			&:hover::before {
+				width: 100%;
+			}
+		}
+	}
+	// .header__user
+	&__user {
+		// ._icon-user
+		&:before {
+			@extend %ic;
+			content: "\e951";
+			display: flex;
+			align-items: center;
+			font-size: rem(20);
+			color: #1e212cff;
+			transition: color 0.2s ease-in;
+			@media (any-hover: hover) {
+				&:hover {
+					color: red;
+				}
+			}
+			@media (max-width: $mobileSmall) {
+				font-size: rem(28);
+			}
+		}
+	}
+}
+.menu {
+	// .menu__body
+	&__body {
+		display: flex;
+		align-items: center;
+	}
+	// .menu__list
+	&__list {
+		@media (min-width: $tablet) {
+			display: flex;
+			flex-wrap: wrap;
+			@include adaptiveValue("column-gap", 40, 20, 1230, 992, 1);
+			row-gap: rem(10);
+			margin-right: rem(10);
+		}
+		@media (max-width: $tablet) {
+			position: fixed;
+			overflow: auto;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: -110%;
+			z-index: 2;
+			margin: 0;
+			background-color: #fff;
+			transition: left 0.3s ease 0s;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			row-gap: rem(40);
+
+			&::before {
+				content: "";
+				position: fixed;
+				height: rem(72);
+				background-color: $nextBgColor;
+				width: 100%;
+				left: -110%;
+				z-index: 2;
+				transition: left 0.3s ease 0s;
+				@media (max-width: $mobile) {
+					height: rem(52);
+				}
+
+				@media (max-width: $mobileSmall) {
+					height: rem(44);
+				}
+			}
+			.menu-open & {
+				left: 0;
+				&::before {
+					left: 0;
+				}
+			}
+		}
+	}
+	// .menu__item
+	&__item {
+		@media (max-width: $tablet) {
+			&:first-child {
+				padding-top: rem(110);
+			}
+		}
+	}
+	// .menu__link
+	&__link {
+		position: relative;
+		font-weight: 700;
+		padding-bottom: rem(2);
+		transition: color 0.2s ease-in;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 0;
+			height: 2.5px;
+			bottom: -2.5px;
+			left: 0;
+			border-bottom: 2.5px solid $hoverColor;
+			transition: width 0.2s ease-in-out;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $hoverColor;
+			}
+			&:hover::before {
+				width: 100%;
+			}
+		}
+
+		@media (max-width: $tablet) {
+			font-size: rem(24);
+		}
+	}
+}
+
+.js-active-link {
+	color: $hoverColor;
+}
+//====================================================================================================
+
+//Burger
+.icon-menu {
+	display: none;
+	@media (max-width: $tablet) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		flex: 0 0 rem(30);
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			left: 0;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - 1px);
+		}
+		.menu-open & {
+			span {
+				transform: scale(0);
+			}
+			&::before {
+				transform: rotate(-45deg);
+				top: calc(50% - 1px);
+			}
+			&::after {
+				transform: rotate(45deg);
+				bottom: calc(50% - 1px);
+			}
+		}
+	}
+}

@@ -1,0 +1,239 @@
+//========================================================================================================================================================
+.blog {
+	@include adaptiveValue("padding-top", 80, 40);
+	@include adaptiveValue("padding-bottom", 180, 40);
+	// .blog__container
+	&__container {
+	}
+	// .blog__title
+	&__title {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 60, 25);
+		}
+	}
+	// .blog__box
+	&__box {
+		display: flex;
+		align-items: center;
+		row-gap: rem(15);
+		@media (max-width: em(1140)) {
+			flex-direction: column;
+		}
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 60, 30);
+		}
+	}
+	// .blog__block
+	&__block {
+		display: flex;
+		align-items: center;
+		row-gap: rem(15);
+		@include adaptiveValue("column-gap", 40, 10, 1230, 1150, 1);
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+}
+
+.list {
+	// .list__item
+	&__item {
+		//display: flex;
+	}
+	// list__item-flex
+	&__item-flex {
+		display: flex;
+		align-items: center;
+		column-gap: rem(10);
+	}
+}
+
+.category {
+	display: flex;
+	align-items: center;
+	column-gap: rem(5);
+	// .category__blog
+	&__blog {
+	}
+}
+
+.blocks-row {
+	display: grid;
+}
+.blocks {
+	// .blocks__column
+	&__column {
+		display: grid;
+		justify-items: center;
+		column-gap: rem(30);
+		@include adaptiveValue("row-gap", 60, 30);
+
+		@media (min-width: em(700)) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (min-width: em(1050)) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+	// .blocks__item
+	&__item {
+		// .blocks__item_flex
+		&_flex {
+			display: flex;
+		}
+	}
+}
+.pagination-cover {
+}
+
+.pagination {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.pagination-item:not(:last-child) {
+	//margin-right: 10px;
+}
+
+.pagination-item a {
+	display: block;
+	font-weight: 700;
+	font-size: rem(18);
+	text-align: center;
+	padding: rem(8);
+	transition: color 0.2s ease;
+}
+
+.pagination-item a i {
+	color: #000;
+	font-size: rem(14);
+}
+
+.item-prev {
+	transform: rotate(180deg);
+}
+.pagination-item.active a {
+	color: $hoverColor;
+}
+
+.pagination-item.active {
+	pointer-events: none;
+}
+
+.pagination-item:hover a {
+	color: $hoverColor;
+}
+
+.pagination-item.disable {
+	opacity: 0.65;
+	pointer-events: none;
+}
+
+.pagination {
+	justify-content: center;
+	align-items: center;
+	column-gap: rem(10);
+}
+//========================================================================================================================================================
+.want {
+	background-color: #f4f5f7;
+	// .want__container
+	&__container {
+	}
+	// .want__body
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		column-gap: rem(30);
+		row-gap: rem(30);
+		padding-top: rem(30);
+		padding-bottom: rem(30);
+
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr;
+			justify-items: center;
+		}
+	}
+	// .want__picture
+	&__picture {
+		@media (max-width: $mobileSmall) {
+			display: none;
+		}
+	}
+	// .want__content
+	&__content {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		@media (max-width: $tablet) {
+			align-items: center;
+		}
+	}
+	// .want__title
+	&__title {
+		font-weight: 900;
+		font-size: 32px;
+		@include adaptiveValue("font-size", 32, 24);
+		line-height: math.div(42, 32);
+		color: $titleColor;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 20);
+		}
+		@media (max-width: $tablet) {
+			text-align: center;
+		}
+	}
+	// .want__form
+	&__form {
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: nowrap;
+		row-gap: rem(25);
+		@media (max-width: em(1100)) {
+			flex-wrap: wrap;
+		}
+		@media (max-width: $tablet) {
+			justify-content: center;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: rem(25);
+		}
+	}
+	// .want__checkbox
+	&__checkbox {
+	}
+}
+.form {
+	// .form__block
+	&__block {
+	}
+	// .form__input
+	&__input {
+	}
+	// .form__btn-block
+	&__btn-block {
+	}
+	// .form__button
+	&__button {
+	}
+}
+
+.checkbox {
+	// .checkbox__input
+	&__input {
+	}
+	// .checkbox__label
+	&__label {
+	}
+	// .checkbox__text
+	&__text {
+		line-height: math.div(26, 16);
+	}
+}

@@ -1,0 +1,210 @@
+// Базовые стили спойлеров
+// Сниппет (HTML): spoller
+
+// Блок со спойлерами
+.spollers {
+	display: grid;
+	gap: 15px;
+	display: none;
+	@media (max-width: em(680.98)) {
+		display: block;
+	}
+}
+// Спойлер
+.spollers__item {
+	font-size: rem(20);
+	color: #fff;
+	&:not(:last-child) {
+		margin-bottom: em(30, 20);
+	}
+}
+// Заголовок спойлера
+.spollers__title {
+	width: 100%;
+	cursor: default;
+	text-align: left;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	padding: rem(10) rem(15);
+	border-radius: rem(5);
+	position: relative;
+	._spoller-init & {
+		cursor: pointer;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			background-color: #fff;
+			height: 2px;
+			width: 12px;
+			transition: transform 0.5s ease 0s;
+		}
+		&::before {
+			transform: translate(-75%, -50%) rotate(40deg);
+		}
+		&::after {
+			transform: translate(0, -50%) rotate(-40deg);
+		}
+		&._spoller-active {
+			&::before {
+				transform: translateX(-75%) rotate(-40deg);
+			}
+			&::after {
+				transform: rotate(40deg);
+			}
+		}
+	}
+}
+// Контент спойлера
+.spollers__body {
+	padding: rem(20);
+	border-radius: rem(5);
+	border: 1px solid #eee;
+}
+//========================================================================================================================================================
+.talk {
+	// .talk__spollers
+	&__spollers {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 25, 10);
+		}
+	}
+	// .talk__item
+	&__item {
+	}
+	// .talk__title
+	&__header {
+		position: relative;
+		max-width: rem(605);
+		text-align: left;
+		padding: rem(10) rem(15) rem(10) rem(30);
+		cursor: default;
+
+		font-weight: 700;
+		@include adaptiveValue("font-size", 20, 16);
+		line-height: math.div(30, 20);
+
+		color: $titleColor;
+		span {
+			@include adaptiveValue("font-size", 20, 14);
+			line-height: math.div(30, 20);
+			padding-right: rem(5);
+			color: #ff3f3a;
+			@media (max-width: $mobile) {
+				display: none;
+			}
+		}
+		._spoller-init & {
+			cursor: pointer;
+			&::before,
+			&::after {
+				position: absolute;
+				left: 3px;
+				top: 28%;
+				color: #ff3f3a;
+				height: 20px;
+				width: 20px;
+				transition: transform 0.5s ease 0s;
+			}
+			&::before {
+				@extend %ic;
+				content: "\e93d";
+			}
+			&::after {
+			}
+			&._spoller-active {
+				&::before {
+					@extend %ic;
+					content: "\e933";
+				}
+				&::after {
+				}
+			}
+		}
+	}
+	// .talk__body
+	&__body {
+		padding: rem(15) rem(15) rem(20) rem(35);
+		border-top: 1px solid #ff3f3a;
+		max-width: rem(605);
+		line-height: math.div(26, 16);
+	}
+}
+//========================================================================================================================================================
+.course-program {
+	// .course-program__spollers
+	&__spollers {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 20, 10);
+		}
+	}
+	// .course-program__item
+	&__item {
+	}
+	// .course-program__header
+	&__header {
+		position: relative;
+		max-width: rem(605);
+		text-align: left;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-right: 5px;
+		padding-left: 30px;
+		cursor: default;
+
+		font-weight: 700;
+		@include adaptiveValue("font-size", 20, 16);
+		line-height: math.div(30, 20);
+
+		color: $titleColor;
+		span {
+			@include adaptiveValue("font-size", 20, 16);
+			line-height: math.div(30, 20);
+			padding-right: rem(5);
+			color: #ff3f3a;
+			@media (max-width: $mobile) {
+				display: none;
+			}
+		}
+		._spoller-init & {
+			cursor: pointer;
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				left: 3px;
+				top: 28%;
+				color: #ff3f3a;
+				height: 20px;
+				width: 20px;
+				transition: transform 0.5s ease 0s;
+			}
+			&::before {
+				@extend %ic;
+				content: "\e93d";
+				//transform: translate(-75%, -50%) rotate(40deg);
+			}
+			&::after {
+				//transform: translate(0, -50%) rotate(-40deg);
+			}
+			&._spoller-active {
+				&::before {
+					@extend %ic;
+					content: "\e933";
+					//transform: translateX(-75%) rotate(-40deg);
+				}
+				&::after {
+					//transform: rotate(40deg);
+				}
+			}
+		}
+	}
+	// .course-program__body
+	&__body {
+		padding: rem(15) rem(15) rem(20) rem(40);
+		border-top: 1px solid #ff3f3a;
+		max-width: rem(605);
+		line-height: math.div(26, 16);
+	}
+}

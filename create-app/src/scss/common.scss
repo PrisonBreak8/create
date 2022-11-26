@@ -1,0 +1,291 @@
+// Заголовки, общие БЄМ блоки и проче...
+.page {
+	// .page__main
+	&__main {
+	}
+	// .main-section__statistics
+	&__statistics {
+	}
+	// .page__who-we-are
+	&__who-we-are {
+	}
+	// .page__ready
+	&__ready {
+	}
+	// .page__events
+	&__events {
+	}
+	// .page__certificate
+	&__certificate {
+	}
+	// .page__tutors
+	&__tutors {
+	}
+	// .page__testimonials
+	&__testimonials {
+	}
+	// .page__our-blog
+	&__our-blog {
+	}
+
+	// .page__subscribe
+	&__subscribe {
+	}
+	// .page__studying
+	&__studying {
+	}
+	// .page__blog
+	&__blog {
+	}
+	// .page__want
+	&__want {
+	}
+	// .page__us
+	&__us {
+	}
+	// .page__watch-video
+	&__watch-video {
+	}
+	// .page__values
+	&__values {
+	}
+	// .page__directions
+	&__directions {
+	}
+	// .page__studing
+	&__studing {
+	}
+	// .page__team
+	&__team {
+	}
+	// .page__jobs
+	&__jobs {
+	}
+	// .page__contacts-info
+	&__contacts-info {
+	}
+	// .page__drop
+	&__drop {
+	}
+	// .page__lecture
+	&__lecture {
+	}
+	// .page__interested
+	&__interested {
+	}
+	// .page__talk
+	&__talk {
+	}
+	// .page__speaker
+	&__speaker {
+	}
+	// .page__whom
+	&__whom {
+	}
+	// .page__best-events
+	&__best-events {
+	}
+	// .page__dont-miss
+	&__dont-miss {
+	}
+	// .page__other
+	&__other {
+	}
+	// .page__the-course
+	&__the-course {
+	}
+	// .page__main-steps
+	&__main-steps {
+	}
+	// .page__discount
+	&__discount {
+	}
+	// .page__course-program
+	&__course-program {
+	}
+}
+//========================================================================================================================================================
+.header-bg-red {
+	background-color: $nextBgColor;
+}
+.header-bg-white {
+	background-color: #fff;
+}
+//========================================================================================================================================================
+.js-hidden {
+	display: none;
+}
+.button-more {
+	@include adaptiveValue("margin-top", 80, 25);
+}
+.button-load {
+	display: flex;
+	align-items: center;
+	column-gap: rem(16);
+	margin: 0 auto;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: math.div(26, 16);
+	transition: color 0.3s ease;
+	@media (any-hover: hover) {
+		&:hover:before {
+			color: $hoverColor;
+			transform: rotate(180deg);
+		}
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			color: $hoverColor;
+		}
+	}
+	&:before {
+		@extend %ic;
+		content: "\e92a";
+		color: #000;
+		font-size: rem(24);
+		transition: color 0.2s ease, transform 0.3s ease-in;
+	}
+}
+//========================================================================================================================================================
+.title {
+	// .title__label
+	&__label {
+		font-weight: 700;
+		line-height: 1.5;
+		letter-spacing: em(1, 16);
+		text-transform: uppercase;
+		color: $titleColor;
+		@include adaptiveValue("font-size", 16, 14);
+		display: flex;
+		align-items: center;
+		gap: rem(10);
+
+		&:not(:last-child) {
+			margin-bottom: em(8, 16);
+		}
+
+		&::before {
+			content: "";
+			width: rem(16);
+			height: rem(2);
+			background-color: rgba(30, 33, 44, 0.7);
+		}
+		// title__label_center
+		&_center {
+			justify-content: center;
+		}
+		// title__label_color-red
+		&_color-red {
+			color: #ff3f3a;
+			&::before {
+				background-color: #ff3f3a;
+			}
+		}
+	}
+	// .title__value
+	&__value {
+		font-weight: 900;
+		@include adaptiveValue("font-size", 46, 28);
+		line-height: 1.3;
+		color: $titleColor;
+		// title__valuel_center
+		&_center {
+			text-align: center;
+		}
+	}
+}
+//========================================================================================================================================================
+.main-title {
+	font-weight: 900;
+	@include adaptiveValue("font-size", 64, 40, 1230, 479, 1);
+	line-height: math.div(83, 64);
+	letter-spacing: em(1, 64);
+	color: $titleColor;
+	p {
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+	}
+}
+//========================================================================================================================================================
+.decoration {
+	// .decoration__2
+	&__2 {
+		position: absolute;
+		top: 0;
+		right: 0;
+		opacity: 0.2;
+		transform: rotate(180deg);
+	}
+	// .decoration__6
+	&__6 {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+}
+//========================================================================================================================================================
+.slider-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	column-gap: rem(20);
+	text-align: center;
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 60, 25);
+	}
+	@media (max-width: $mobileSmall) {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+//========================================================================================================================================================
+.slider-controls {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	column-gap: rem(10);
+	// .slider-controls__arrow
+	&__arrow {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: rem(48);
+		height: rem(48);
+		border-radius: 50%;
+		transition: background-color 0.3s ease, color 0.3s ease;
+		font-size: rem(18);
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #ff3f3a;
+				color: #fff;
+			}
+		}
+	}
+}
+.swiper-button-disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+//========================================================================================================================================================
+.btn-body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: rem(40);
+	row-gap: rem(20);
+	@media (max-width: $mobileSmall) {
+		flex-direction: column;
+	}
+	// .btn-body__more
+	&__more {
+		font-weight: 700;
+		@include adaptiveValue("font-size", 28, 20);
+		line-height: math.div(42, 28);
+		color: $titleColor;
+	}
+	// .btn-body__button
+	&__button {
+	}
+}

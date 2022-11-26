@@ -1,0 +1,114 @@
+.tabs {
+	// .tabs__navigation
+	&__navigation {
+		display: flex;
+	}
+	// .tabs__title
+	&__title {
+		border: 1px solid #eee;
+		padding: rem(10) rem(15);
+		border-radius: rem(5);
+		&._tab-active {
+			border: 1px solid #000;
+		}
+	}
+	// .tabs__content
+	&__content {
+		border: 1px solid #eee;
+		padding: rem(10) rem(15);
+	}
+	// .tabs__body
+	&__body {
+	}
+}
+//========================================================================================================================================================
+.benefits {
+	// .benefits__tabs-navigation
+	&__tabs-navigation {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		row-gap: rem(20);
+		column-gap: rem(10);
+		@media (max-width: $tablet) {
+			justify-content: center;
+		}
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 60, 30);
+		}
+	}
+	// .benefits__tabs-title
+	&__tabs-title {
+		display: flex;
+		align-items: center;
+		gap: rem(8);
+		border-radius: rem(5);
+		font-weight: 700;
+		font-size: 16px;
+		line-height: math.div(26, 16);
+		color: #9a9ca5;
+
+		padding-bottom: rem(10);
+		padding-top: rem(10);
+		@include adaptiveValue("padding-left", 72, 35, 1230, 992, 1);
+		@include adaptiveValue("padding-right", 72, 35, 1230, 992, 1);
+		transition: color 0.2s ease-in;
+
+		&._tab-active {
+			color: #ff3f3a;
+			border: 1px solid #ff3f3a;
+			border-radius: 4px;
+		}
+
+		span {
+			color: #1e212c;
+			font-weight: 700;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: #ff3f3a;
+			}
+		}
+	}
+
+	// .benefits__content
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: rem(20);
+		row-gap: rem(20);
+		@media (max-width: $mobile) {
+			flex-direction: column;
+		}
+	}
+	// .benefits__description
+	&__description {
+		max-width: rem(495);
+		@media (max-width: $mobile) {
+			min-width: 100%;
+		}
+	}
+
+	// .benefits__sub-title
+	&__sub-title {
+		font-weight: 900;
+		@include adaptiveValue("font-size", 32, 24);
+		line-height: math.div(42, 32);
+		color: $titleColor;
+		&:not(:last-child) {
+			margin-bottom: rem(25);
+			@include adaptiveValue("margin-bottom", 25, 15);
+		}
+		@media (max-width: $mobile) {
+			text-align: center;
+		}
+	}
+	// .benefits__text
+	&__text {
+		p {
+			line-height: math.div(26, 16);
+		}
+	}
+}

@@ -1,0 +1,255 @@
+//<FORM>
+// Снипет (HTML):
+.form {
+	&__row {
+	}
+	&__column {
+	}
+	&__line {
+	}
+	&__input {
+	}
+	&__button {
+	}
+	&__error {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		color: red;
+		font-size: rem(12);
+		transform: translate(5%, 5px);
+	}
+}
+//========================================================================================================================================================
+.form-flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	column-gap: rem(25);
+	row-gap: rem(25);
+}
+
+.form {
+	@media (max-width: $mobileSmall) {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	// .form__block
+	&__block {
+		position: relative;
+
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+		}
+	}
+	// .form__input
+	&__input {
+		width: rem(425);
+		outline-color: green;
+		background: #fff;
+		padding: rem(13) rem(16);
+		border: 1px solid #d7dadd;
+		border-radius: rem(4);
+		line-height: math.div(26, 16);
+		color: #4e4f53;
+
+		&::placeholder {
+			color: #9a9ca5;
+		}
+
+		&._form-error {
+			color: red;
+			&::placeholder {
+				color: red;
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+		}
+	}
+}
+//========================================================================================================================================================
+.footer {
+	// .footer__form
+	&__form {
+		position: relative;
+		&:not(:last-child) {
+			margin-bottom: rem(12);
+		}
+	}
+	// .footer__input
+	&__input {
+		position: relative;
+		width: 100%;
+		height: rem(46);
+		padding: rem(0) rem(40) rem(0) rem(12);
+		background: rgba(255, 255, 255, 0.12);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		border-radius: rem(4);
+		font-size: rem(14);
+		line-height: math.div(18, 12);
+		outline-color: #fff;
+		color: #fff;
+
+		&::placeholder {
+			color: #fff;
+			opacity: 0.6;
+		}
+	}
+}
+.button {
+	// .button__submit
+	&__submit {
+		position: absolute;
+		right: 10px;
+		top: 35%;
+		// ._icon-arrow-right
+		&:before {
+			@extend %ic;
+			content: "\e95a";
+			font-size: rem(12);
+			color: #fff;
+			opacity: 0.6;
+		}
+	}
+}
+//========================================================================================================================================================
+.dont-miss {
+	// .dont-miss__form
+	&__form {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(25);
+	}
+
+	// .dont-miss__line
+	&__line {
+		position: relative;
+	}
+	// .dont-miss__chapter
+	&__chapter {
+	}
+	// .dont-miss__label
+	&__label {
+		cursor: pointer;
+	}
+	// .dont-miss__input
+	&__input {
+		outline-color: green;
+		border-radius: 0 !important;
+		height: rem(52);
+		min-width: 100%;
+		display: block;
+		padding: 0px 15px;
+		border: 1px solid #eee;
+		color: #000;
+
+		&::placeholder {
+			color: #9a9ca5;
+		}
+
+		&._form-error {
+			color: red;
+			&::placeholder {
+				color: red;
+			}
+		}
+	}
+}
+//========================================================================================================================================================
+.discount {
+	// .discount__form
+	&__form {
+	}
+	// .discount__lines
+	&__lines {
+		display: flex;
+		align-items: flex-end;
+		flex-wrap: wrap;
+		column-gap: rem(25);
+		@include adaptiveValue("column-gap", 25, 10, 1230, 1100, 1);
+		row-gap: rem(25);
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	// .discount__line
+	&__line {
+		position: relative;
+		width: 100%;
+		flex: calc(25% - 25px);
+	}
+	// .discount__chapter
+	&__chapter {
+	}
+	// .discount__label
+	&__label {
+		font-size: 14px;
+		line-height: math.div(21, 14);
+		padding-bottom: rem(5);
+		cursor: pointer;
+	}
+	// .discount__input
+	&__input {
+		outline-color: green;
+		border-radius: 0 !important;
+		height: rem(44);
+		min-width: 100%;
+		display: block;
+		padding: 0px 15px;
+		border: 1px solid #eee;
+		color: #000;
+
+		&::placeholder {
+			color: #9a9ca5;
+		}
+
+		&._form-error {
+			color: red;
+			&::placeholder {
+				color: red;
+			}
+		}
+	}
+	// .discount__join
+	&__join {
+	}
+}
+
+//========================================================================================================================================================
+//</FORM>
+
+// <BUTTONS>
+// Снипет (HTML): btn
+@import "button";
+
+// <INPUTS>
+// Снипет (HTML): inp
+@import "input";
+
+// <CHECK>
+// Снипет (HTML): chk
+@import "checkbox";
+
+// <RADIO>
+// Снипет (HTML): opt
+// @import "radio";
+
+// <SELECT>
+// Снипет (HTML): sel
+@import "select";
+
+// <RATING>
+// Снипет (HTML): rating
+// @import "rating";
+
+// <QUANTITY>
+// Снипет (HTML): qa
+// @import "quantity";
+
+// <RANGE>
+// Снипет (HTML):
+// @import "range";
